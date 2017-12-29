@@ -13,18 +13,18 @@
     <head>
         <meta charset="UTF-8">
         <title>Apero Orsay</title>
-        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="../css/bootstrap.css">
     </head>
     <body>
         <nav class="navbar navbar-light bg-faded" style="background-color: #e3f2fd;">
-            <a class="navbar-brand" href="index.php">RugbyOrsay<!-- Logo rugby orsay--></a>
+            <a class="navbar-brand" href="../index.php">RugbyOrsay<!-- Logo rugby orsay--></a>
             <div class="navbar-nav d-inline">
-                <a href="connexion.php"><button class="btn btn-outline-success">Connexion</button></a>
+                <a href="formulaire_connexion.php"><button class="btn btn-outline-success">Connexion</button></a>
             </div>
         </nav>
 
         <!-- Formulaire d'inscription -->
-        <form action="inscrire.php" method="POST" class="form-group container">
+        <form action="../controlleur/inscription.php" method="POST" class="form-group container">
             <label for="nom">Nom</label>
             <input type="text" class="form-control" id="nom" placeholder="Entrez votre nom">
             <label for="prenom">Prenom</label>
@@ -41,7 +41,15 @@
                 <button type="submit" class="btn btn-primary">Inscrire</button>
             </div>
         </form>
-
+        <?php
+            if(isset($_COOKIE["erreur"])) {
+                $erreur = $_COOKIE["erreur"];
+                echo '<div class="alert alert-danger"><strong>Erreur!</strong>' . $erreur . '</div>';
+            } else
+            {
+                echo 'not cookie';
+            }
+        ?>
     </body>
 </html>
 
