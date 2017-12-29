@@ -32,23 +32,26 @@
             <label for="email">E-mail</label>
             <input type="email" class="form-control" id="email" placeholder="Entrez votre e-mail">
             <label for="mdp">Mot de passe</label>
-            <input type="password" class="form-control" id="mdp" placeholder="Entrez votre mot de passe">
+            <input type="password" class="form-control" id="mdp" placeholder="Entrez votre mot de passe" value="12 chiffres et/ou lettres">
             <label for="ville">Ville</label>
             <input type="text" class="form-control" id="ville" placeholder="Entrez votre ville">
             <label for="adresse">Adresse</label>
             <input type="text" class="form-control" id="adresse" placeholder="Entrez votre adresse">
+            <label for="adresse">CP</label>
+            <input type="text" class="form-control" id="CP" placeholder="Entrez votre code postal">
             <div class="text-center" style="margin-top: 15px;">
                 <button type="submit" class="btn btn-primary">Inscrire</button>
             </div>
         </form>
-        <?php
+
+        <?php /**
             if(isset($_COOKIE["erreur"])) {
                 $erreur = $_COOKIE["erreur"];
                 echo '<div class="alert alert-danger"><strong>Erreur!</strong>' . $erreur . '</div>';
             } else
             {
                 echo 'not cookie';
-            }
+            }**/
         ?>
     </body>
 </html>
