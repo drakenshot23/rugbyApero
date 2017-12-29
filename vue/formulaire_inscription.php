@@ -6,6 +6,25 @@
  * Time: 23:28
  */
 
+$nom = "";
+$prenom = "";
+$ville = "";
+$mail = "";
+$adresse = "";
+$CP = "";
+$mdp = "12 chiffres et/ou lettres";
+
+if(isset($_COOKIE["visite"]))
+{
+    $nom = $_COOKIE["nom"];
+    $prenom = $_COOKIE["prenom"];
+    $ville = $_COOKIE["ville"];
+    $mail =$_COOKIE["mail"];
+    $adresse =$_COOKIE["adresse"];
+    $CP =$_COOKIE["cp"];
+    $mdp =$_COOKIE["mdp"];
+   }
+
 ?>
 
 <!DOCTYPE html>
@@ -26,19 +45,19 @@
         <!-- Formulaire d'inscription -->
         <form action="../controlleur/inscription.php" method="POST" class="form-group container">
             <label for="nom">Nom</label>
-            <input type="text" class="form-control" id="nom" placeholder="Entrez votre nom">
+            <input type="text" class="form-control" id="nom" placeholder="<?php echo $nom?>">
             <label for="prenom">Prenom</label>
-            <input type="text" class="form-control" id="prenom" placeholder="Entrez votre prenom">
+            <input type="text" class="form-control" id="prenom" placeholder="<?php echo $prenom?>>
             <label for="email">E-mail</label>
-            <input type="email" class="form-control" id="email" placeholder="Entrez votre e-mail">
+            <input type="email" class="form-control" id="email" placeholder="<?php echo $mail?>">
             <label for="mdp">Mot de passe</label>
-            <input type="password" class="form-control" id="mdp" placeholder="Entrez votre mot de passe" value="12 chiffres et/ou lettres">
+            <input type="password" class="form-control" id="mdp" placeholder="<?php echo $mdp?>">
             <label for="ville">Ville</label>
-            <input type="text" class="form-control" id="ville" placeholder="Entrez votre ville">
+            <input type="text" class="form-control" id="ville" placeholder="<?php echo $ville?>">
             <label for="adresse">Adresse</label>
-            <input type="text" class="form-control" id="adresse" placeholder="Entrez votre adresse">
+            <input type="text" class="form-control" id="adresse" placeholder="<?php echo $adresse?>">
             <label for="adresse">CP</label>
-            <input type="text" class="form-control" id="CP" placeholder="Entrez votre code postal">
+            <input type="text" class="form-control" id="CP" placeholder="<?php echo $cp?>">
             <div class="text-center" style="margin-top: 15px;">
                 <button type="submit" class="btn btn-primary">Inscrire</button>
             </div>
