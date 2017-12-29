@@ -1,3 +1,12 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: anthony
+ * Date: 29/12/2017
+ * Time: 15:26
+ */
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +15,7 @@
 
 </head>
 <body>
-<form method="post" action="inscription_enfant.php">
+<form method="post" action="vue/inscription_enfant.php">
     <p>Nom : <input type="text" name="nomE">       Prénom : <input type="text" name="prenomE"></p>
     <p>Age : <input type="text" name="ageE"></p>
     <p>Téléphone parent : <input type="text" name="telP"></p>
