@@ -1,13 +1,3 @@
-<?php
-/**
- * Created by IntelliJ IDEA.
- * User: Robert
- * Date: 28/12/2017
- * Time: 23:28
- */
-
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
