@@ -14,15 +14,21 @@
     </nav>
 
     <!-- Formulaire de connexion -->
-    <form action="../controlleur/connexion.php" class="form-group container">
+    <form action="../controlleur/connexion.php" method="POST" class="form-group container">
         <label for="email">E-mail</label>
-        <input type="email" class="form-control" id="email" placeholder="Entrez votre e-mail">
+        <input type="email" class="form-control" id="email" name="email" placeholder="Entrez votre e-mail">
         <label for="mdp">Mot de passe</label>
-        <input type="password" class="form-control" id="mdp" placeholder="Entrez votre mot de passe">
+        <input type="password" class="form-control" id="mdp" name="mdp" placeholder="Entrez votre mot de passe">
         <div class="text-center" style="margin-top: 15px">
             <button class="btn btn-primary">Connexion</button>
         </div>
     </form>
+    <?php
+        if(isset($_GET['err']) && $_GET['err'] == 'errInscrit')
+        {
+            echo "<div class='container-fluid'><p class='alert alert-danger' style='text-align: center'>Mauvais identifiant ou mot de passe!</p></div>";
+        }
+    ?>
 
 </body>
 </html>
