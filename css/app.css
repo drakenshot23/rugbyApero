@@ -1,0 +1,16 @@
+#enfants{
+    width: 25%;
+}
+
+#inscriptionEnfant
+{
+    display: inline-block;
+}
+
+@media (min-width: 400px)
+{
+    .list-group
+    {
+        width: 100%;
+    }
+}

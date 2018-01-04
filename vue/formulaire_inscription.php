@@ -1,13 +1,22 @@
+<?php
+session_start();
+if(!empty($_SESSION) || isset($_SESSION['id']) || isset($_SESSION['nom']))
+{
+    header("Location: espace_personnel_parents.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
         <title>Apero Orsay</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/bootstrap.css">
     </head>
     <body>
         <nav class="navbar navbar-light bg-faded" style="background-color: #e3f2fd;">
-            <a class="navbar-brand" href="../index.php">RugbyOrsay<!-- Logo rugby orsay--></a>
+            <a class="navbar-brand" href="../index.php"><img src="../img/logoRugby.png" width="80" height="50"/>Apero</a>
             <div class="navbar-nav d-inline">
                 <a href="formulaire_connexion.php"><button class="btn btn-outline-success">Connexion</button></a>
             </div>
@@ -33,7 +42,7 @@
             <label for="cp">Code postal</label>
             <input type="text" class="form-control" id="cp" name="cp" placeholder="Entrez votre code postal">
             <div class="text-center" style="margin-top: 15px;">
-                <button type="submit" class="btn btn-primary">Inscrire</button>
+                <button type="submit" class="btn btn-primary">S'inscrire</button>
             </div>
         </form>
         <?php

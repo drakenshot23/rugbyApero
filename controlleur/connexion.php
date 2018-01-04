@@ -18,7 +18,7 @@ $email = null;
 $mdp = null;
 $err = null;
 
-// traiter tous les cas d'erreur de saisie de la part de l'utilisateur
+// eliminer les caracteres non autorisees
 function test_input($data)
 {
     $data = trim($data);
@@ -37,13 +37,14 @@ try
     echo "Connexion à la base de donnée échouée : " . $e->getMessage();
 }
 
+
 if(isset($_POST['email']) && isset($_POST['mdp']))
 {
     $email = test_input($_POST['email']);
 
     $mdp = test_input($_POST['mdp']);
 
-    $verifierUtilisateurExiste = "SELECT numUtilisateur FROM utilisateur WHERE mail = :email AND mdp = :mdp";
+    $verifierUtilisateurExiste = "SELECT numUtilisateur, nom FROM utilisateur WHERE mail = :email AND mdp = :mdp";
 
     $resExist = $bd->prepare($verifierUtilisateurExiste);
 
@@ -51,11 +52,15 @@ if(isset($_POST['email']) && isset($_POST['mdp']))
         'email' => $email,
         'mdp' => $mdp));
 
-    $row = $resExist->fetchAll();
+    $row = $resExist->fetchAll(PDO::FETCH_ASSOC);
 
     if($row)
     {
-        echo "Bienvenue dans votre espace utilisateur";
+        session_start();
+        $_SESSION['id'] = $row[0]['numUtilisateur'];
+        $_SESSION['nom'] = $row[0]['nom'];
+
+        header("Location: ../vue/espace_personnel_parents.php");
     } else
     {
         $err = "errInscrit";
