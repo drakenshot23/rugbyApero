@@ -16,7 +16,7 @@
 </head>
 <body>
     <nav class="navbar navbar-light bg-faded" style="background-color: #e3f2fd;">
-        <a class="navbar-brand" href="../index.php"><img src="../img/logoRugby.png" width="80" height="50"/>Apero</a>
+        <a class="navbar-brand" href="../index.php"><img src="../img/logoRugby.png" width="75" height="50"/>Apero</a>
         <div class="navbar-nav d-inline">
             <a href="formulaire_inscription.php"><button class="btn btn-outline-primary">Inscription</button></a>
         </div>

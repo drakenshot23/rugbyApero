@@ -41,37 +41,41 @@
         </div>
     </nav>
 
-    <div id="app">
-        <div class="container" id="enfants">
+    <div id="apero">
+        <div class="float-left" style="width: 250px; margin-right: 20px;">
             <h1 style="text-align: center;">Enfants</h1>
-            <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-center">Lucas <span class="badge badge-primary">Solde : {{ price }}$</span></li>
+            <ul class="list-group" v-for="enfant in listeEnfants">
+                <li class="list-group-item d-flex justify-content-between align-items-center" @click="selectionnerEnfant">{{ enfant.nom }} <span class="badge badge-primary">Solde : {{ enfant.solde }}€</span></li>
             </ul>
         </div>
 
-        <div id="lol">
+        <div id="">
             <ul class="nav nav-tabs justify-content-center">
-                <li class="nav-item"><a href="#" class="nav-link active">Inscrire Enfant</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Ajouter Argent</a></li>
+                <li class="nav-item"><a href="#" class="nav-link fa fa-plus" @click="afficher"> Ajouter Argent</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active fa fa-user-plus" @click="afficher"> Inscrire Enfant</a></li>
             </ul>
-            <div class="container" id="inscriptionEnfant">
-                <form action="#" method="POST" class="form-group container" id="inscriptionEnfant">
+            <div id="ajoutArgent">
+                <form class="form-group" id="ajoutArgent" style="width: 500px;">
+                    <label for="nom">{{enfantSelectionne}}</label>
+                    <input type="number" class="form-group" id="montantAjoute" placeholder="Montant à ajouter">€
+                </form>
+            </div>
+            <div id="inscriptionEnfant" style="display: flex; justify-content: center;" :class="estActive">
+                <form  class="form-group" id="inscriptionEnfant" style="width: 500px;">
                     <label for="nom">Nom</label>
                     <input type="text" class="form-control" name="nom" id="nom" placeholder="Entrez votre nom">
                     <label for="prenom">Prenom</label>
                     <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Entrez votre prenom">
                     <label for="age">Age</label>
-                    <input type="number" class="form-control" name="age" id="age" placeholder="Entrez votre age">
+                    <input type="number" class="form-control" name="age" id="age" placeholder="Entrez votre âge">
                     <label for="categorie">Categorie</label>
                     <input type="text" class="form-control" name="categorie" id="categorie" placeholder="Entrez votre categorie">
                     <div class="text-center" style="margin-top: 15px;">
-                        <button type="submit" class="btn btn-primary">Inscription</button>
+                        <button type="button" class="btn btn-primary" @click="inscrireEnfant">Inscription</button>
                     </div>
                 </form>
             </div>
         </div>
-
-
     </div>
 
     <script type="text/javascript" src="../js/jquery.js" ></script>

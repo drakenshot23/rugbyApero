@@ -1,16 +1,4 @@
-#enfants{
-    width: 25%;
-}
-
-#inscriptionEnfant
+.estActive
 {
-    display: inline-block;
-}
 
-@media (min-width: 400px)
-{
-    .list-group
-    {
-        width: 100%;
-    }
 }
