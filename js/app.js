@@ -11,13 +11,34 @@ let app = new Vue({
     data: {
         listeEnfants: liste,
         afficherAjouterArgent: true,
-        enfantSelectionne: liste[1].nom + " Solde : " + liste[1].solde + "€"
+        enfantSelectionne: liste[1].nom + " Solde : " + liste[1].solde + "€",
+
 
     },
     methods: {
         afficher: function (event) {
-            this.afficherAjouterArgent = !this.afficherAjouterArgent;
-            if(event.target == '')
+
+            if($(event.target).hasClass("fa-plus") && $(event.target).hasClass("active"))
+            {
+                $("fa-user-plus").addClass("active");
+            }
+            if($(event.target).hasClass("fa-user-plus") && $(event.target).hasClass("active"))
+            {
+                alert("user");
+            }
+            /*if(!$(event.target).hasClass("active"))
+            {
+                if($(event.target).hasClass("fa-plus"))
+                {
+                    $(event.target).addClass("active");
+                    $('fa-user-plus').removeClass("active");
+                }
+                if($(event.target).hasClass("fa-user-plus"))
+                {
+                    $(event.target).addClass("active");
+                    $('fa-plus').removeClass("active");
+                }
+            }*/
         },
         inscrireEnfant: function () {
             $.ajax({
