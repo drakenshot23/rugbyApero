@@ -8,9 +8,10 @@
         else if ($_SESSION['type']=='parenUtilisateur'){
             header("Location: espace_utilisateur.php");
         }
-        else ($_SESSION['type']=='presidentApero'){
+        else if  ($_SESSION['type']=='presidentApero'){
             header("Location: espace_president.php");
         }
+        header("Location: ../index.php");
     }
 ?>
 
