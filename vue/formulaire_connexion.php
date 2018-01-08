@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(!empty($_SESSION) || isset($_SESSION['id']) || isset($_SESSION['nom'] || isset($_SESSION['type']) ))
+    if(!empty($_SESSION) || isset($_SESSION['id']) || isset($_SESSION['nom']) || isset($_SESSION['type']) )
     {
         if ($_SESSION['type']=='parent'){
             header("Location: espace_personnel_parents.php");

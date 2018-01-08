@@ -34,7 +34,6 @@ CREATE TABLE Enfant(
         mailParent       Varchar (40) ,
         libelleCategorie Varchar (30) ,
         numUtilisateur   Int ,
-        numCategorie     Int ,
         PRIMARY KEY (numEnfant )
 )ENGINE=InnoDB;
 
@@ -80,16 +79,6 @@ CREATE TABLE Compte(
 )ENGINE=InnoDB;
 
 
-#------------------------------------------------------------
-# Table: Categorie
-#------------------------------------------------------------
-
-CREATE TABLE Categorie(
-        numCategorie     int (11) Auto_increment  NOT NULL ,
-        libelleCategorie Varchar (25) ,
-        PRIMARY KEY (numCategorie )
-)ENGINE=InnoDB;
-
 
 #------------------------------------------------------------
 # Table: Course
@@ -116,7 +105,6 @@ CREATE TABLE Composition(
 )ENGINE=InnoDB;
 
 ALTER TABLE Enfant ADD CONSTRAINT FK_Enfant_numUtilisateur FOREIGN KEY (numUtilisateur) REFERENCES Utilisateur(numUtilisateur);
-ALTER TABLE Enfant ADD CONSTRAINT FK_Enfant_numCategorie FOREIGN KEY (numCategorie) REFERENCES Categorie(numCategorie);
 ALTER TABLE Stock ADD CONSTRAINT FK_Stock_numProduit FOREIGN KEY (numProduit) REFERENCES produit(numProduit);
 ALTER TABLE produit ADD CONSTRAINT FK_produit_numCourse FOREIGN KEY (numCourse) REFERENCES Course(numCourse);
 ALTER TABLE Compte ADD CONSTRAINT FK_Compte_numUtilisateur FOREIGN KEY (numUtilisateur) REFERENCES Utilisateur(numUtilisateur);

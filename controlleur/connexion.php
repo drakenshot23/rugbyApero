@@ -60,8 +60,18 @@ if(isset($_POST['email']) && isset($_POST['mdp']))
         $_SESSION['id'] = $row[0]['numUtilisateur'];
         $_SESSION['nom'] = $row[0]['nom'];
         $_SESSION['type'] = $row[0]['typeGestionnaire'];
+        $_SESSION['mail'] = $row[0]['mail'];
 
-        header("Location: ../vue/espace_personnel_parents.php");
+        if ($_SESSION['type']=='parent'){
+            header("Location: espace_personnel_parents.php");
+        }
+        else if ($_SESSION['type']=='parenUtilisateur'){
+            header("Location: ../vue/espace_utilisateur.php");
+        }
+        else if  ($_SESSION['type']=='../vue/presidentApero'){
+            header("Location: ../vue/espace_president.php");
+        }
+        header("Location: ../index.php");
     } else
     {
         $err = "errInscrit";
