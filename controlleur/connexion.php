@@ -11,7 +11,7 @@ require_once("ConnectPDO.php");
 $bd = null;
 $dsn = "mysql:dbname=apero;host=localhost";
 $user = "root";
-$password = "";
+$password = "root";
 
 
 $email = null;
@@ -31,7 +31,7 @@ function test_input($data)
 
 try
 {
-    $bd = ConnectPDO::getInstanceBD($dsn, $user, $password);
+    $bd = ConnectPDO::getInstanceBD('mysql:dbname=apero;host=localhost', 'root', 'root');
 } catch(PDOException $e)
 {
     echo "Connexion à la base de donnée échouée : " . $e->getMessage();
@@ -44,7 +44,7 @@ if(isset($_POST['email']) && isset($_POST['mdp']))
 
     $mdp = test_input($_POST['mdp']);
 
-    $verifierUtilisateurExiste = "SELECT numUtilisateur, nom FROM utilisateur WHERE mail = :email AND mdp = :mdp";
+    $verifierUtilisateurExiste = "SELECT numUtilisateur,typeGestionnaire, nom FROM utilisateur WHERE mail = :email AND mdp = :mdp";
 
     $resExist = $bd->prepare($verifierUtilisateurExiste);
 
@@ -59,6 +59,7 @@ if(isset($_POST['email']) && isset($_POST['mdp']))
         session_start();
         $_SESSION['id'] = $row[0]['numUtilisateur'];
         $_SESSION['nom'] = $row[0]['nom'];
+        $_SESSION['type'] = $row[0]['typeGestionnaire'];
 
         header("Location: ../vue/espace_personnel_parents.php");
     } else

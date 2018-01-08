@@ -1,8 +1,16 @@
 <?php
     session_start();
-    if(!empty($_SESSION) || isset($_SESSION['id']) || isset($_SESSION['nom']))
+    if(!empty($_SESSION) || isset($_SESSION['id']) || isset($_SESSION['nom'] || isset($_SESSION['type']) ))
     {
-        header("Location: espace_personnel_parents.php");
+        if ($_SESSION['type']=='parent'){
+            header("Location: espace_personnel_parents.php");
+        }
+        else if ($_SESSION['type']=='parenUtilisateur'){
+            header("Location: espace_utilisateur.php");
+        }
+        else ($_SESSION['type']=='presidentApero'){
+            header("Location: espace_president.php");
+        }
     }
 ?>
 
