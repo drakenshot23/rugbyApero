@@ -11,10 +11,14 @@ let app = new Vue({
     data: {
         listeEnfants: liste,
         afficherAjouterArgent: true,
-        enfantSelectionne: liste[1].nom
+        enfantSelectionne: liste[1].nom + " Solde : " + liste[1].solde + "€"
 
     },
     methods: {
+        afficher: function (event) {
+            this.afficherAjouterArgent = !this.afficherAjouterArgent;
+            if(event.target == '')
+        },
         inscrireEnfant: function () {
             $.ajax({
                 method: 'POST',
@@ -37,11 +41,10 @@ let app = new Vue({
                 }
             })
         },
-        selectionnerEnfant: function () {
+        selectionnerEnfant: function (event) {
             // Selectionne l'enfant auquel on ajoutera l'argent
-            alert("Enfant selectionnée");
-        },
-        afficher: function () {
+            let text = $(event.target).text();
+            this.enfantSelectionne = text;
 
         }
     },

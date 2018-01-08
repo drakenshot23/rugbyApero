@@ -54,10 +54,13 @@
                 <li class="nav-item"><a href="#" class="nav-link fa fa-plus" v-on:click="afficher"> Ajouter Argent</a></li>
                 <li class="nav-item"><a href="#" class="nav-link active fa fa-user-plus" v-on:click="afficher"> Inscrire Enfant</a></li>
             </ul>
-            <div id="ajoutArgent" v-if="afficherAjouterArgent">
+            <div id="ajoutArgent" v-if="afficherAjouterArgent" style="display: flex; justify-content: center;">
                 <form class="form-group" id="ajoutArgent" style="width: 500px;">
-                    <label for="nom">{{enfantSelectionne}}</label>
-                    <input type="number" class="form-group" id="montantAjoute" placeholder="Montant à ajouter">€
+                    <label for="montantEnfant">{{enfantSelectionne}}</label>
+                    <input type="number" class="form-control" id="montantEnfant" placeholder="Montant à ajouter">
+                    <div class="text-center" style="margin-top: 15px;">
+                        <button type="button" class="btn btn-primary" v-on:click="">Ajouter de l'argent</button>
+                    </div>
                 </form>
             </div>
             <div id="inscriptionEnfant" style="display: flex; justify-content: center;" v-else>
@@ -71,7 +74,7 @@
                     <label for="categorie">Categorie</label>
                     <input type="text" class="form-control" name="categorie" id="categorie" placeholder="Entrez votre categorie">
                     <div class="text-center" style="margin-top: 15px;">
-                        <button type="button" class="btn btn-primary" @click="inscrireEnfant">Inscription</button>
+                        <button type="button" class="btn btn-primary" v-on:click="inscrireEnfant">Inscription</button>
                     </div>
                 </form>
             </div>
