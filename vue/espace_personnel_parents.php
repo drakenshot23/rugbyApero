@@ -51,8 +51,8 @@
 
         <div id="">
             <ul class="nav nav-tabs justify-content-center">
-                <li class="nav-item"><a href="#" class="nav-link fa fa-plus" v-on:click="afficher"> Ajouter Argent</a></li>
-                <li class="nav-item"><a href="#" class="nav-link active fa fa-user-plus" v-on:click="afficher"> Inscrire Enfant</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active fa fa-plus" v-on:click="afficher"> Ajouter Argent</a></li>
+                <li class="nav-item"><a href="#" class="nav-link fa fa-user-plus" v-on:click="afficher"> Inscrire Enfant</a></li>
             </ul>
             <div id="ajoutArgent" v-if="afficherAjouterArgent" style="display: flex; justify-content: center;">
                 <form class="form-group" id="ajoutArgent" style="width: 500px;">
