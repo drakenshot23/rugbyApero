@@ -45,22 +45,22 @@
         <div class="float-left" style="width: 250px; margin-right: 20px;">
             <h1 style="text-align: center;">Enfants</h1>
             <ul class="list-group" v-for="enfant in listeEnfants">
-                <li class="list-group-item d-flex justify-content-between align-items-center" @click="selectionnerEnfant">{{ enfant.nom }} <span class="badge badge-primary">Solde : {{ enfant.solde }}€</span></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center" v-on:click="selectionnerEnfant">{{ enfant.nom }} <span class="badge badge-primary">Solde : {{ enfant.solde }}€</span></li>
             </ul>
         </div>
 
         <div id="">
             <ul class="nav nav-tabs justify-content-center">
-                <li class="nav-item"><a href="#" class="nav-link fa fa-plus" @click="afficher"> Ajouter Argent</a></li>
-                <li class="nav-item"><a href="#" class="nav-link active fa fa-user-plus" @click="afficher"> Inscrire Enfant</a></li>
+                <li class="nav-item"><a href="#" class="nav-link fa fa-plus" v-on:click="afficher"> Ajouter Argent</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active fa fa-user-plus" v-on:click="afficher"> Inscrire Enfant</a></li>
             </ul>
-            <div id="ajoutArgent">
+            <div id="ajoutArgent" v-if="afficherAjouterArgent">
                 <form class="form-group" id="ajoutArgent" style="width: 500px;">
                     <label for="nom">{{enfantSelectionne}}</label>
                     <input type="number" class="form-group" id="montantAjoute" placeholder="Montant à ajouter">€
                 </form>
             </div>
-            <div id="inscriptionEnfant" style="display: flex; justify-content: center;" :class="estActive">
+            <div id="inscriptionEnfant" style="display: flex; justify-content: center;" v-else>
                 <form  class="form-group" id="inscriptionEnfant" style="width: 500px;">
                     <label for="nom">Nom</label>
                     <input type="text" class="form-control" name="nom" id="nom" placeholder="Entrez votre nom">

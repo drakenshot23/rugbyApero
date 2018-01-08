@@ -10,6 +10,7 @@ let app = new Vue({
     el: '#apero',
     data: {
         listeEnfants: liste,
+        afficherAjouterArgent: true,
         enfantSelectionne: liste[1].nom
 
     },
@@ -39,6 +40,9 @@ let app = new Vue({
         selectionnerEnfant: function () {
             // Selectionne l'enfant auquel on ajoutera l'argent
             alert("Enfant selectionnée");
+        },
+        afficher: function () {
+
         }
     },
     beforeCreate: function() // se lance avant que le DOM soit initialisé
