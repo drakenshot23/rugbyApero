@@ -38,7 +38,7 @@ try
     echo "Connexion à la base de donnée échouée : " . $e->getMessage();
 }
 
-if(isset($_SESSION['id']) && isset($_SESSION['nom'] && isset($_SESSION['mail'])))
+if(isset($_SESSION['id']) && isset($_SESSION['nom']) && isset($_SESSION['mail']))
 {
     $id = $_SESSION['id'];
     $nom = $_SESSION['nom'];
@@ -113,9 +113,7 @@ $stmt->execute();
 
 <?php
 /* Exécute une requête préparée en passant un tableau de valeurs */
-$sql = 'SELECT nom, couleur, calories
-    FROM fruit
-WHERE calories < :calories AND couleur = :couleur';
+$sql = 'SELECT nom, couleur, calories FROM fruit WHERE calories < :calories AND couleur = :couleur';
 $sth = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 $sth->execute(array(':calories' => 150, ':couleur' => 'red'));
 $red = $sth->fetchAll();
