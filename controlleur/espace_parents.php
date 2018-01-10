@@ -74,7 +74,7 @@ function inscription($data, $mail, $id,$bd)
     $stmt->binParam(3, $data['age']);
     $stmt->binParam(4, $data['telParent']);
     $stmt->binParam(5, $mail);
-    $stmt->binParam(6, $data['libelleCategorie']);
+    $stmt->binParam(6, $data['categorie']);
     $stmt->binParam(7, $id);
 
     $stmt->execute();

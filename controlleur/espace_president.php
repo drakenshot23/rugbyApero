@@ -71,7 +71,7 @@ function ajoutProduit($data,$bd)
 
     $stmt->execute();
 
-    $stmt2 = $bd->prepare("INSERT INTO PRODUIT VALUES(?,?,?,?)");
+    $stmt2 = $bd->prepare("INSERT INTO STOCK VALUES(?,?)");
     $stmt2->binParam(1, $data['nomProduit']);
     $stmt2->binParam(2, $data['prix']);
 
@@ -87,6 +87,14 @@ function fixerPrix($data,$bd)
 
 
 function reinitBD($bd){
+    $bd->execute("DELETE FROM PRODUIT");
+    $bd->execute("DELETE FROM STOCK");
+    $bd->execute("DELETE FROM ENFANT");
+    $bd->execute("DELETE FROM COMPTE");
+    $bd->execute("DELETE FROM COMPOSITION]");
+    $bd->execute("DELETE FROM COURSE");
+    $bd->execute("DELETE FROM UTILISATEUR WHERE typeGestiobnnaire = 'parenUtilisateur' OR typeGestionnaire ='parent'");
+
 
 }
 
