@@ -66,10 +66,10 @@ if(isset($_POST['email']) && isset($_POST['mdp']))
             header("Location: espace_personnel_parents.php");
         }
         else if ($_SESSION['type']=='parenUtilisateur'){
-            header("Location: ../vue/espace_utilisateur.php");
+            header("Location: ../vue/espace_personnel_utilisateur.php");
         }
-        else if  ($_SESSION['type']=='../vue/presidentApero'){
-            header("Location: ../vue/espace_president.php");
+        else if  ($_SESSION['type']=='presidentApero'){
+            header("Location: ../vue/espace_personnel_president.php");
         }
         header("Location: ../index.php");
     } else

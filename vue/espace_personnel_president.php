@@ -43,8 +43,10 @@ if(isset($_SESSION['id']) && isset($_SESSION['nom']))
     <div id="apero">
         <div>
             <ul class="nav nav-tabs justify-content-center">
-                <li class="nav-item"><a href="#" class="nav-link active fa fa-user-plus">Définir utilisateur</a></li>
-                <li class="nav-item"><a href="#" class="nav-link active fa fa-user-plus">Créer un produit</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active fa fa-user-plus">Ajouter un produit</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active fa fa-user-plus">Définir un parent utilisateur</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active fa fa-user-plus">Supprimer un parent</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active fa fa-user-plus">Réinitialiser la base de données</a></li>
             </ul>
         </div>
     </div>

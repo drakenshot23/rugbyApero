@@ -51,11 +51,11 @@
 
         <div id="">
             <ul class="nav nav-tabs justify-content-center">
-                <li class="nav-item"><a href="#" class="nav-link active fa fa-plus" v-on:click="afficher"> Ajouter Argent</a></li>
-                <li class="nav-item"><a href="#" class="nav-link fa fa-user-plus" v-on:click="afficher"> Inscrire Enfant</a></li>
+                <li class="nav-item"><a href="#" id="ajoutArgent" class="nav-link fa fa-plus" v-on:click="changeTab"> Ajouter Argent</a></li>
+                <li class="nav-item"><a href="#" id="inscriptionEnfant" class="nav-link fa fa-user-plus" v-on:click="changeTab"> Inscrire Enfant</a></li>
             </ul>
-            <div id="ajoutArgent" v-if="afficherAjouterArgent" style="display: flex; justify-content: center;">
-                <form class="form-group" id="ajoutArgent" style="width: 500px;">
+            <div v-if="selectedTab === 1" style="display: flex; justify-content: center;">
+                <form class="form-group" style="width: 500px;">
                     <label for="montantEnfant">{{enfantSelectionne}}</label>
                     <input type="number" class="form-control" id="montantEnfant" placeholder="Montant à ajouter">
                     <div class="text-center" style="margin-top: 15px;">
@@ -63,8 +63,8 @@
                     </div>
                 </form>
             </div>
-            <div id="inscriptionEnfant" style="display: flex; justify-content: center;" v-else>
-                <form  class="form-group" id="inscriptionEnfant" style="width: 500px;">
+            <div style="display: flex; justify-content: center;" v-if="selectedTab === 2">
+                <form  class="form-group" style="width: 500px;">
                     <label for="nom">Nom</label>
                     <input type="text" class="form-control" name="nom" id="nom" placeholder="Entrez votre nom">
                     <label for="prenom">Prenom</label>
@@ -73,6 +73,8 @@
                     <input type="number" class="form-control" name="age" id="age" placeholder="Entrez votre âge">
                     <label for="categorie">Categorie</label>
                     <input type="text" class="form-control" name="categorie" id="categorie" placeholder="Entrez votre categorie">
+                    <label for="telParent">Numero de téléphone</label>
+                    <input type="text" class="form-control" name="telParent" id="telParent" placeholder="Numero de téléphone">
                     <div class="text-center" style="margin-top: 15px;">
                         <button type="button" class="btn btn-primary" v-on:click="inscrireEnfant">Inscription</button>
                     </div>

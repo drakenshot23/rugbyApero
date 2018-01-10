@@ -1,44 +1,36 @@
 let liste = [{
     nom: "Lucas",
-    solde: 10
+    solde: 10,
+    id: null
 },{
     nom: "Boby",
-    solde: 15
+    solde: 15,
+    id: null
 }];
+
+let actionTabs = {AJOUTER: 1, INSCRIRE: 2};
 
 let app = new Vue({
     el: '#apero',
     data: {
+        montant: $("montantEnfant").val(),
+        nom: $("nom"),
+        prenom: $("prenom"),
+
         listeEnfants: liste,
         afficherAjouterArgent: true,
         enfantSelectionne: liste[1].nom + " Solde : " + liste[1].solde + "€",
-
-
+        selectedTab: actionTabs.AJOUTER
     },
     methods: {
-        afficher: function (event) {
-
-            if($(event.target).hasClass("fa-plus") && $(event.target).hasClass("active"))
+        changeTab: function (event) {
+            if((event.target.id) === "ajoutArgent")
             {
-                $("fa-user-plus").addClass("active");
+                this.selectedTab = actionTabs.AJOUTER;
             }
-            if($(event.target).hasClass("fa-user-plus") && $(event.target).hasClass("active"))
-            {
-                alert("user");
+            if((event.target.id) === "inscriptionEnfant") {
+                this.selectedTab = actionTabs.INSCRIRE;
             }
-            /*if(!$(event.target).hasClass("active"))
-            {
-                if($(event.target).hasClass("fa-plus"))
-                {
-                    $(event.target).addClass("active");
-                    $('fa-user-plus').removeClass("active");
-                }
-                if($(event.target).hasClass("fa-user-plus"))
-                {
-                    $(event.target).addClass("active");
-                    $('fa-plus').removeClass("active");
-                }
-            }*/
         },
         inscrireEnfant: function () {
             $.ajax({
@@ -71,7 +63,7 @@ let app = new Vue({
     },
     beforeCreate: function() // se lance avant que le DOM soit initialisé
     {
-        // Recuperer la liste des enfants et la stocker dans la liste
+
     },
     mounted: function () { // Se lance une fois que le DOM est initialisé
         // initialiser les valeurs dans le HTML

@@ -43,8 +43,8 @@ if(isset($_SESSION['id']) && isset($_SESSION['nom']))
     <div id="apero">
         <div>
             <ul class="nav nav-tabs justify-content-center">
-                <li class="nav-item"><a href="#" class="nav-link active fa fa-plus" >Goûter enfant</a></li>
-                <li class="nav-item"><a href="#" class="nav-link fa fa-user-plus" ></a></li>
+                <li class="nav-item"><a href="#" class="nav-link active fa fa-plus" >Ajouter des courses</a></li>
+                <li class="nav-item"><a href="#" class="nav-link fa fa-user-plus" >Créer un goûter</a></li>
             </ul>
         </div>
     </div>
