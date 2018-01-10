@@ -18,6 +18,7 @@ $inscrireEnfant = "INSERT INTO enfant VALUES('', :nomEnfant, :prenomEnfant, :age
 $ajoutArgent = "INSERT INTO compte VALUES('', date(), :montant, :numUtilisateur, :numEnfant)";
 
 $id = null;
+$idEnfant = null;
 $nom = null;
 $mail = null;
 
@@ -55,10 +56,10 @@ if(empty(stripslashes(file_get_contents("php://input"))))
     $data = json_decode(stripslashes(file_get_contents("php://input")), true);
     if($data['commande'] == "inscription")
     {
-        inscription($data, $mail,$id,$bd);
+        inscription($data, $mail,$id,$bd, $idEnfant);
     } else if($data['commande'] == "ajouter")
     {
-        ajouterArgent($data);
+        ajouterArgent($data,$id,$bd);
     }
 
 }
@@ -79,47 +80,20 @@ function inscription($data, $mail, $id,$bd)
     $stmt->execute();
 }
 
-function ajouterArgent($donnees)
+function ajouterArgent($data,$id,$bd, $idEnfant)
 {
 
+    $stmt = $bd->prepare("INSERT INTO ENFANT VALUES(?,?,?,?)");
+    $stmt->binParam(1, $date);
+    $stmt->binParam(2, $data['montant']);
+    $stmt->binParam(3, $id);
+    $stmt->binParam(4, $idEnfant);
+
+
+    $date->date();
+    $idEnfant->$bd->execute("SELECT numEnfant FROM ENFANT WHERE numUtilisateur = $id ");
+
+    $stmt->execute();
 }
 
 ?>
-
-
-<?php
-$stmt = $dbh->prepare("INSERT INTO REGISTRY (name, value) VALUES (?, ?)");
-$stmt->bindParam(1, $name);
-$stmt->bindParam(2, $value);
-
-// insertion d'une ligne
-$name = 'one';
-$value = 1;
-$stmt->execute();
-
-// insertion d'une autre ligne avec différentes valeurs
-$name = 'two';
-$value = 2;
-$stmt->execute();
-?>
-
-
-
-
-
-
-
-
-
-<?php
-/* Exécute une requête préparée en passant un tableau de valeurs */
-$sql = 'SELECT nom, couleur, calories
-    FROM fruit
-WHERE calories < :calories AND couleur = :couleur';
-$sth = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
-$sth->execute(array(':calories' => 150, ':couleur' => 'red'));
-$red = $sth->fetchAll();
-$sth->execute(array(':calories' => 175, ':couleur' => 'yellow'));
-$yellow = $sth->fetchAll();
-?>
-
