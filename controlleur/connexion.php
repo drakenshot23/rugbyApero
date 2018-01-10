@@ -11,7 +11,7 @@ require_once("ConnectPDO.php");
 $bd = null;
 $dsn = "mysql:dbname=apero;host=localhost";
 $user = "root";
-$password = "root";
+$password = "";
 
 
 $email = null;
@@ -31,7 +31,7 @@ function test_input($data)
 
 try
 {
-    $bd = ConnectPDO::getInstanceBD('mysql:dbname=apero;host=localhost', 'root', 'root');
+    $bd = ConnectPDO::getInstanceBD($dsn, $user, $password);
 } catch(PDOException $e)
 {
     echo "Connexion à la base de donnée échouée : " . $e->getMessage();
