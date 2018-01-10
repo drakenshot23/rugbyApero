@@ -41,5 +41,23 @@ if(empty(stripslashes(file_get_contents("php://input"))))
     echo $err;
 }
 else {
+    $data = json_decode(stripslashes(file_get_contents("php://input")), true);
+    if($data['commande'] == "ajoutCourse")
+    {
+        ajoutCourse($data,$bd);
+    } else if($data['commande'] == "gouter")
+    {
+        gouter($data,$bd);
+    }
+
+
+}
+
+function ajoutCourse($data,$bd){
+
+
+}
+
+function gouter($data,$bd){
 
 }

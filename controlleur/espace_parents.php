@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by IntelliJ IDEA.
- * User: Robert
+ * User: anthony
  * Date: 05/01/2018
  * Time: 16:35
  */
@@ -39,7 +39,7 @@ try
     echo "Connexion à la base de donnée échouée : " . $e->getMessage();
 }
 
-if(isset($_SESSION['id']) && isset($_SESSION['nom'] && isset($_SESSION['mail'])))
+if(isset($_SESSION['id']) && isset($_SESSION['nom']) && isset($_SESSION['mail']))
 {
     $id = $_SESSION['id'];
     $nom = $_SESSION['nom'];
@@ -59,9 +59,9 @@ if(empty(stripslashes(file_get_contents("php://input"))))
         inscription($data, $mail,$id,$bd, $idEnfant);
     } else if($data['commande'] == "ajouter")
     {
-        ajouterArgent($data,$id,$bd);
+        $date = date();
+        ajouterArgent($data,$id,$bd,$date);
     }
-
 }
 
 
@@ -78,22 +78,29 @@ function inscription($data, $mail, $id,$bd)
     $stmt->binParam(7, $id);
 
     $stmt->execute();
+
+    $idEnfant = $bd->execute("SELECT numEnfant FROM ENFANT WHERE numUtilisateur = $id ");
+    afficherEnfant($bd,$id,$idEnfant);
 }
 
-function ajouterArgent($data,$id,$bd, $idEnfant)
+function ajouterArgent($data,$id,$bd, $idEnfant,$date)
 {
 
-    $stmt = $bd->prepare("INSERT INTO ENFANT VALUES(?,?,?,?)");
+    $stmt = $bd->prepare("INSERT INTO COMPTE VALUES(?,?,?,?)");
     $stmt->binParam(1, $date);
     $stmt->binParam(2, $data['montant']);
     $stmt->binParam(3, $id);
     $stmt->binParam(4, $idEnfant);
 
-
-    $date->date();
-    $idEnfant->$bd->execute("SELECT numEnfant FROM ENFANT WHERE numUtilisateur = $id ");
+    $idEnfant = $bd->execute("SELECT numEnfant FROM ENFANT WHERE numUtilisateur = $id ");
 
     $stmt->execute();
 }
 
+function afficherEnfant($bd,$id,$idEnfant){
+    $stmt = $bd->prepare("SELECT E.numEnfant, E.prenom, SUM(montant) AS solde FROM ENFANT E, COMPTE C where E.numUtilisateur = $id AND C.numEnfant = $idEnfant");
+    $stmt->execute();
+    $tab = json_encode($stmt->fetchAll());
+    echo $tab;
+}
 ?>

@@ -39,5 +39,59 @@ if(empty(stripslashes(file_get_contents("php://input"))))
     echo $err;
 }
 else {
+    $data = json_decode(stripslashes(file_get_contents("php://input")), true);
+    if($data['commande'] == "ajoutProduit")
+    {
+        ajoutProduit($data,$bd);
+    } else if($data['commande'] == "fixerPrix")
+    {
+        fixerPrix($data,$bd);
+    }
 
+    else if($data['commande'] == "supprimerUtilisateur")
+    {
+        supprimerUtilisateur($data,$bd);
+    }
+    else if($data['commande'] == "reinitBD")
+    {
+        reinitBD($bd);
+    }
+
+}
+
+function ajoutProduit($data,$bd)
+{
+
+    $stmt = $bd->prepare("INSERT INTO PRODUIT VALUES(?,?,?,?)");
+    $stmt->binParam(1, $data['nomProduit']);
+    $stmt->binParam(2, $data['prix']);
+    $stmt->binParam(3, $data['qteProduit']);
+    $stmt->binParam(4, $data['seuilRupture']);
+
+
+    $stmt->execute();
+
+    $stmt2 = $bd->prepare("INSERT INTO PRODUIT VALUES(?,?,?,?)");
+    $stmt2->binParam(1, $data['nomProduit']);
+    $stmt2->binParam(2, $data['prix']);
+
+    $stmt2->execute();
+}
+
+function fixerPrix($data,$bd)
+{
+    $prix = $data['prix'];
+    $nomP = $data['nom'];
+    $bd->execute("UPDATE PRODUIT SET prix = $prix WHERE nom = $nomP");
+}
+
+
+function reinitBD($bd){
+
+}
+
+function supprimerUtilisateur($data,$bd){
+
+    $mailU = $data['mail'];
+    $bd->execute("DELETE FROM UTILISATEUR WHERE mail = $mailU]");
 }
