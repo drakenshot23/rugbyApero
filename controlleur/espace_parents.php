@@ -80,7 +80,9 @@ function inscription($data, $mail, $id,$bd)
     $stmt->execute();
 
     $idEnfant = $bd->execute("SELECT numEnfant FROM ENFANT WHERE numUtilisateur = $id ");
-    afficherEnfant($bd,$id,$idEnfant);
+    $res = afficherEnfant($bd,$id,$idEnfant);
+    echo $res;
+
 }
 
 function ajouterArgent($data,$id,$bd, $idEnfant,$date)
@@ -101,6 +103,6 @@ function afficherEnfant($bd,$id,$idEnfant){
     $stmt = $bd->prepare("SELECT E.numEnfant, E.prenom, SUM(montant) AS solde FROM ENFANT E, COMPTE C where E.numUtilisateur = $id AND C.numEnfant = $idEnfant");
     $stmt->execute();
     $tab = json_encode($stmt->fetchAll());
-    echo $tab;
+    return $tab;
 }
 ?>

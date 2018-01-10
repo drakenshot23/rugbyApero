@@ -76,6 +76,9 @@ function ajoutProduit($data,$bd)
     $stmt2->binParam(2, $data['prix']);
 
     $stmt2->execute();
+
+    $res = aficherproduit($bd);
+    echo $res;
 }
 
 function fixerPrix($data,$bd)
@@ -102,4 +105,14 @@ function supprimerUtilisateur($data,$bd){
 
     $mailU = $data['mail'];
     $bd->execute("DELETE FROM UTILISATEUR WHERE mail = $mailU]");
+
+
+}
+
+function aficherproduit($bd){
+
+    $stmt = $bd->prepare("SELECT nomProduit, prix FROM PRODUIT ");
+    $stmt->execute();
+    $tab = json_encode($stmt->fetchAll());
+    return $tab;
 }
