@@ -67,29 +67,40 @@ if(empty(stripslashes(file_get_contents("php://input"))))
 
 function inscription($data, $mail, $id,$bd)
 {
-
-    $stmt = $bd->prepare("INSERT INTO ENFANT VALUES(?,?,?,?,?,?,?)");
-    $stmt->binParam(1, $data['nom']);
-    $stmt->binParam(2, $data['prenom']);
-    $stmt->binParam(3, $data['age']);
-    $stmt->binParam(4, $data['telParent']);
-    $stmt->binParam(5, $mail);
-    $stmt->binParam(6, $data['categorie']);
-    $stmt->binParam(7, $id);
-
-    $stmt->execute();
-
     $prenom = $data['prenom'];
-    $stmt2 = $bd->prepare("SELECT numEnfant FROM ENFANT WHERE numUtilisateur = $id AND prenom = $prenom");
-    $stmt2->execute();
-    $idEnfant = $stmt2->fetchAll();
+    $nom2 = $data['nom'];
+    $stmt = $bd->prepare("SELECT numEnfant FROM ENFANT WHERE numUtilisateur = $id AND nom = $nom2 AND prenom = $prenom");
+    $stmt->execute();
+    $row = $stmt->fetchAll();
 
-    if($idEnfant){
-        $res = afficherEnfant($bd,$id,$idEnfant);
-        echo $res;
+    if($row){
+        echo "err"; //existe dans la BD
     }
     else {
-        echo "err";
+
+        $stmt2 = $bd->prepare("INSERT INTO ENFANT VALUES(?,?,?,?,?,?,?)");
+        $stmt2->binParam(1, $data['nom']);
+        $stmt2->binParam(2, $data['prenom']);
+        $stmt2->binParam(3, $data['age']);
+        $stmt2->binParam(4, $data['telParent']);
+        $stmt2->binParam(5, $mail);
+        $stmt2->binParam(6, $data['categorie']);
+        $stmt2->binParam(7, $id);
+
+        $stmt2->execute();
+
+        $prenom = $data['prenom'];
+        $stmt3 = $bd->prepare("SELECT numEnfant FROM ENFANT WHERE numUtilisateur = $id AND prenom = $prenom");
+        $stmt3->execute();
+        $idEnfant = $stmt3->fetchAll();
+
+        if ($idEnfant) {
+            $res = afficherEnfant($bd, $id, $idEnfant);
+            echo $res;
+        } else {
+            echo "err";
+        }
+
     }
 
 }
