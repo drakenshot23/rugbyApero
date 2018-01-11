@@ -79,9 +79,18 @@ function inscription($data, $mail, $id,$bd)
 
     $stmt->execute();
 
-    $idEnfant = $bd->execute("SELECT numEnfant FROM ENFANT WHERE numUtilisateur = $id ");
-    $res = afficherEnfant($bd,$id,$idEnfant);
-    echo $res;
+    $prenom = $data['prenom'];
+    $stmt2 = $bd->prepare("SELECT numEnfant FROM ENFANT WHERE numUtilisateur = $id AND prenom = $prenom");
+    $stmt2->execute();
+    $idEnfant = $stmt2->fetchAll();
+
+    if($idEnfant){
+        $res = afficherEnfant($bd,$id,$idEnfant);
+        echo $res;
+    }
+    else {
+        echo "err";
+    }
 
 }
 
@@ -94,9 +103,10 @@ function ajouterArgent($data,$id,$bd, $idEnfant,$date)
     $stmt->binParam(3, $id);
     $stmt->binParam(4, $idEnfant);
 
-    $idEnfant = $bd->execute("SELECT numEnfant FROM ENFANT WHERE numUtilisateur = $id ");
+    $idEnfant = $bd->execute("SELECT numEnfant FROM ENFANT WHERE numUtilisateur = $id");
 
     $stmt->execute();
+
 }
 
 function afficherEnfant($bd,$id,$idEnfant){

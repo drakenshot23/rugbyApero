@@ -59,26 +59,59 @@ else {
 
 }
 
-function ajoutProduit($data,$bd)
+/**
+ * @param $data
+ * @param $bd
+ */
+function ajoutProduit($data, $bd)
 {
-
-    $stmt = $bd->prepare("INSERT INTO PRODUIT VALUES(?,?,?,?)");
-    $stmt->binParam(1, $data['nomProduit']);
-    $stmt->binParam(2, $data['prix']);
-    $stmt->binParam(3, $data['qteProduit']);
-    $stmt->binParam(4, $data['seuilRupture']);
-
-
+    $nomProduit = $data['nomProduit'];
+    $stmt = $bd->prepare("SELECT numProduit FROM PRODUIT WHERE nomProduit = $nomProduit ");
     $stmt->execute();
+    $row = $stmt->fetchALL();
 
-    $stmt2 = $bd->prepare("INSERT INTO STOCK VALUES(?,?)");
-    $stmt2->binParam(1, $data['nomProduit']);
-    $stmt2->binParam(2, $data['prix']);
+    if ($row){
+        echo "err";
+    }
+    else {
 
-    $stmt2->execute();
+        $stmt2 = $bd->prepare("INSERT INTO PRODUIT VALUES(?,?,?,?)");
+        $stmt2->binParam(1, $data['nomProduit']);
+        $stmt2->binParam(2, $data['prix']);
+        $stmt2->binParam(3, $data['qteProduit']);
+        $stmt2->binParam(4, $data['seuilRupture']);
 
-    $res = aficherproduit($bd);
-    echo $res;
+        $stmt2->execute();
+
+
+        $stmt3 = $bd->prepare("SELECT numProduit FROM PRODUIT WHERE nomProduit = $nomProduit ");
+        $stmt3->execute();
+        $row2 = $stmt3->fetchALL();
+
+        if($row2){
+
+            $stmt4 = $bd->prepare("INSERT INTO STOCK VALUES(?,?)");
+            $stmt4->binParam(1, $data['nomProduit']);
+            $stmt4->binParam(2, $data['prix']);
+
+            $stmt4->execute();
+
+            $stmt5 = $bd->prepare("SELECT numStock FROM STOCK WHERE nomProduit = ");
+            $stmt5->execute();
+            $row3 = $stmt5->fetchAll();
+
+            if(row3){
+                $res = aficherproduit($bd);
+                echo $res;
+            }
+            else {
+                echo "err";
+            }
+        }
+        else {
+            echo "err";
+        }
+    }
 }
 
 function fixerPrix($data,$bd)
