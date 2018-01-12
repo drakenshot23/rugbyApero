@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6b41f5a1-4aa1-499e-98f9-ef39ad1e38ff" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/espace_personnel_parents.php" afterPath="$PROJECT_DIR$/vue/espace_personnel_parents.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/espace_personnel_president.php" afterPath="$PROJECT_DIR$/vue/espace_personnel_president.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/espace_personnel_utilisateur.php" afterPath="$PROJECT_DIR$/vue/espace_personnel_utilisateur.php" />
     </list>
@@ -28,67 +29,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="espace_parents.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controlleur/espace_parents.php">
+      <file leaf-file-name="espace_personnel_parents.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue/espace_personnel_parents.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="75" column="14" lean-forward="true" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
-              <folding>
-                <element signature="e#6#94#0#PHP" expanded="true" />
-                <marker date="1515759236169" expanded="true" signature="166:238" ph="SELECT numEn... enfant" />
-                <marker date="1515759236169" expanded="true" signature="258:350" ph="SELECT monta... compte" />
-                <marker date="1515759236169" expanded="true" signature="374:518" ph="INSERT INTO enfant... " />
-                <marker date="1515759236169" expanded="true" signature="538:614" ph="INSERT INTO compte... " />
-                <marker date="1515759236169" expanded="true" signature="1511:1586" ph="SELECT numUt... utilisateur" />
-                <marker date="1515759236169" expanded="true" signature="2095:2200" ph="INSERT INTO ENFANT... " />
-                <marker date="1515759236169" expanded="true" signature="2095:2201" ph="INSERT INTO ENFANT... " />
-                <marker date="1515759236169" expanded="true" signature="2317:2393" ph="SELECT numUt... utilisateur" />
-                <marker date="1515759236169" expanded="true" signature="2696:2802" ph="SELECT e.num... enfant" />
-                <marker date="1515759236169" expanded="true" signature="3369:3436" ph="INSERT INTO COMPTE... " />
-                <marker date="1515759236169" expanded="true" signature="3538:3644" ph="SELECT e.num... enfant" />
-                <marker date="1515759236169" expanded="true" signature="3864:3940" ph="SELECT e.num... enfant" />
-                <marker date="1515759236169" expanded="true" signature="3864:3970" ph="SELECT e.num... enfant" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="espace_president.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controlleur/espace_president.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1860">
-              <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
-              <folding>
-                <element signature="e#6#89#0#PHP" expanded="true" />
-                <element signature="e#458#571#0#PHP" expanded="false" />
-                <element signature="e#625#4193#0#PHP" expanded="false" />
-                <element signature="e#1180#2840#0#PHP" expanded="false" />
-                <element signature="e#2574#2700#0#PHP" expanded="false" />
-                <element signature="e#2727#2830#0#PHP" expanded="false" />
-                <element signature="e#3053#3103#1#PHP" expanded="false" />
-                <marker date="1515770394714" expanded="true" signature="930:980" ph="SELECT numPr... PRODUIT" />
-                <marker date="1515770394714" expanded="true" signature="930:991" ph="SELECT numPr... PRODUIT" />
-                <marker date="1515770394714" expanded="true" signature="1452:1527" ph="INSERT INTO PRODUIT... " />
-                <marker date="1515770394714" expanded="true" signature="1643:1693" ph="SELECT numPr... PRODUIT" />
-                <marker date="1515770394714" expanded="true" signature="1643:1704" ph="SELECT numPr... PRODUIT" />
-                <marker date="1515770394714" expanded="true" signature="2085:2141" ph="INSERT INTO STOCK... " />
-                <marker date="1515770394714" expanded="true" signature="2177:2222" ph="SELECT numSt... STOCK" />
-                <marker date="1515770394714" expanded="true" signature="2177:2234" ph="SELECT numSt... STOCK" />
-                <marker date="1515770394714" expanded="true" signature="2444:2480" ph="SELECT nomPr... PRODUIT" />
-                <marker date="1515770394714" expanded="true" signature="2979:3023" ph="UPDATE PRODU... " />
-                <marker date="1515770394714" expanded="true" signature="2979:3028" ph="UPDATE PRODU... " />
-                <marker date="1515770394714" expanded="true" signature="3138:3174" ph="SELECT nomPr... PRODUIT" />
-                <marker date="1515770394714" expanded="true" signature="3342:3378" ph="DELETE FROM " />
-                <marker date="1515770394714" expanded="true" signature="3342:3384" ph="DELETE FROM " />
-                <marker date="1515770394714" expanded="true" signature="3544:3563" ph="DELETE FROM " />
-                <marker date="1515770394714" expanded="true" signature="3589:3606" ph="DELETE FROM " />
-                <marker date="1515770394714" expanded="true" signature="3632:3650" ph="DELETE FROM " />
-                <marker date="1515770394714" expanded="true" signature="3676:3694" ph="DELETE FROM " />
-                <marker date="1515770394714" expanded="true" signature="3720:3744" ph="DELETE FROM " />
-                <marker date="1515770394714" expanded="true" signature="3770:3788" ph="DELETE FROM " />
-                <marker date="1515770394714" expanded="true" signature="3814:3912" ph="DELETE FROM " />
-                <marker date="1515770394714" expanded="true" signature="4007:4043" ph="SELECT nomPr... PRODUIT" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="21" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -96,63 +42,44 @@
       <file leaf-file-name="espace_personnel_president.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vue/espace_personnel_president.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="42" lean-forward="false" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+            <state relative-caret-position="315">
+              <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="espace_personnel_utilisateur.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="espace_personnel_utilisateur.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vue/espace_personnel_utilisateur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="26" column="42" lean-forward="false" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+            <state relative-caret-position="215">
+              <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="espace_personnel_parents.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vue/espace_personnel_parents.php">
+      <file leaf-file-name="formulaire_connexion.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue/formulaire_connexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="espace_utilisateur.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controlleur/espace_utilisateur.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+            <state relative-caret-position="210">
+              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
               <folding>
-                <marker date="1515770242517" expanded="true" signature="955:1015" ph="INSERT INTO COURSE... " />
-                <marker date="1515770242517" expanded="true" signature="1166:1227" ph="SELECT numPr... PRODUIT" />
-                <marker date="1515770242517" expanded="true" signature="1455:1506" ph="SELECT numEn... ENFANT" />
-                <marker date="1515770242517" expanded="true" signature="1455:1533" ph="SELECT numEn... ENFANT" />
-                <marker date="1515770242517" expanded="true" signature="1809:1843" ph="SELECT numCo... ENFANT" />
-                <marker date="1515770242517" expanded="true" signature="1809:1857" ph="SELECT numCo... ENFANT" />
-                <marker date="1515770242517" expanded="true" signature="1809:1858" ph="SELECT numCo... ENFANT" />
-                <marker date="1515770242517" expanded="true" signature="2027:2089" ph="INSERT INTO COMPOSITION... " />
-                <marker date="1515770242517" expanded="true" signature="2189:2233" ph="SELECT prix PRODUIT" />
-                <marker date="1515770242517" expanded="true" signature="2189:2234" ph="SELECT prix PRODUIT" />
-                <marker date="1515770242517" expanded="true" signature="2423:2493" ph="INSERT INTO COMPTE... " />
-                <marker date="1515770242517" expanded="true" signature="2595:2659" ph="UPDATE STOCK... " />
-                <marker date="1515770242517" expanded="true" signature="2595:2660" ph="UPDATE STOCK... " />
+                <marker date="1515749941155" expanded="true" signature="1934:1952" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="baseRugby.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/baseRugby.sql">
+      <file leaf-file-name="formulaire_inscription.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue/formulaire_inscription.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="964">
-              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="76" selection-end-column="28" />
-              <folding />
+            <state relative-caret-position="60">
+              <caret line="4" column="53" lean-forward="false" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+              <folding>
+                <marker date="1515320717037" expanded="true" signature="2900:2918" ph="..." />
+                <marker date="1515320717037" expanded="true" signature="3163:3181" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -217,8 +144,8 @@
         <option value="$PROJECT_DIR$/controlleur/espace_utilisateur.php" />
         <option value="$PROJECT_DIR$/controlleur/espace_president.php" />
         <option value="$PROJECT_DIR$/vue/espace_personnel_parents.php" />
-        <option value="$PROJECT_DIR$/vue/espace_personnel_utilisateur.php" />
         <option value="$PROJECT_DIR$/vue/espace_personnel_president.php" />
+        <option value="$PROJECT_DIR$/vue/espace_personnel_utilisateur.php" />
       </list>
     </option>
   </component>
@@ -239,8 +166,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="130" />
-    <option name="y" value="175" />
+    <option name="x" value="62" />
+    <option name="y" value="49" />
     <option name="width" value="1426" />
     <option name="height" value="807" />
   </component>
@@ -1321,11 +1248,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515770414416</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="page espace parent">
+      <created>1515770681666</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1515770681666</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135201000" />
+    <option name="totallyTimeSpent" value="135964000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1337,7 +1271,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="130" y="175" width="1426" height="807" extended-state="0" />
+    <frame x="62" y="49" width="1426" height="807" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1823282" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1650,21 +1584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/formulaire_inscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="53" lean-forward="false" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlleur/connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1612">
-          <caret line="67" column="55" lean-forward="false" selection-start-line="67" selection-start-column="55" selection-end-line="67" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controlleur/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1170">
@@ -1701,77 +1620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="18" column="63" lean-forward="true" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/formulaire_connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="14" selection-end-column="5" />
-          <folding>
-            <marker date="1515749941155" expanded="true" signature="1934:1952" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlleur/espace_parents.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="75" column="14" lean-forward="true" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
-          <folding>
-            <element signature="e#6#94#0#PHP" expanded="true" />
-            <marker date="1515759236169" expanded="true" signature="166:238" ph="SELECT numEn... enfant" />
-            <marker date="1515759236169" expanded="true" signature="258:350" ph="SELECT monta... compte" />
-            <marker date="1515759236169" expanded="true" signature="374:518" ph="INSERT INTO enfant... " />
-            <marker date="1515759236169" expanded="true" signature="538:614" ph="INSERT INTO compte... " />
-            <marker date="1515759236169" expanded="true" signature="1511:1586" ph="SELECT numUt... utilisateur" />
-            <marker date="1515759236169" expanded="true" signature="2095:2200" ph="INSERT INTO ENFANT... " />
-            <marker date="1515759236169" expanded="true" signature="2095:2201" ph="INSERT INTO ENFANT... " />
-            <marker date="1515759236169" expanded="true" signature="2317:2393" ph="SELECT numUt... utilisateur" />
-            <marker date="1515759236169" expanded="true" signature="2696:2802" ph="SELECT e.num... enfant" />
-            <marker date="1515759236169" expanded="true" signature="3369:3436" ph="INSERT INTO COMPTE... " />
-            <marker date="1515759236169" expanded="true" signature="3538:3644" ph="SELECT e.num... enfant" />
-            <marker date="1515759236169" expanded="true" signature="3864:3940" ph="SELECT e.num... enfant" />
-            <marker date="1515759236169" expanded="true" signature="3864:3970" ph="SELECT e.num... enfant" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/baseRugby.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="964">
-          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="76" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlleur/espace_utilisateur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding>
-            <marker date="1515770242517" expanded="true" signature="955:1015" ph="INSERT INTO COURSE... " />
-            <marker date="1515770242517" expanded="true" signature="1166:1227" ph="SELECT numPr... PRODUIT" />
-            <marker date="1515770242517" expanded="true" signature="1455:1506" ph="SELECT numEn... ENFANT" />
-            <marker date="1515770242517" expanded="true" signature="1455:1533" ph="SELECT numEn... ENFANT" />
-            <marker date="1515770242517" expanded="true" signature="1809:1843" ph="SELECT numCo... ENFANT" />
-            <marker date="1515770242517" expanded="true" signature="1809:1857" ph="SELECT numCo... ENFANT" />
-            <marker date="1515770242517" expanded="true" signature="1809:1858" ph="SELECT numCo... ENFANT" />
-            <marker date="1515770242517" expanded="true" signature="2027:2089" ph="INSERT INTO COMPOSITION... " />
-            <marker date="1515770242517" expanded="true" signature="2189:2233" ph="SELECT prix PRODUIT" />
-            <marker date="1515770242517" expanded="true" signature="2189:2234" ph="SELECT prix PRODUIT" />
-            <marker date="1515770242517" expanded="true" signature="2423:2493" ph="INSERT INTO COMPTE... " />
-            <marker date="1515770242517" expanded="true" signature="2595:2659" ph="UPDATE STOCK... " />
-            <marker date="1515770242517" expanded="true" signature="2595:2660" ph="UPDATE STOCK... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/espace_personnel_president.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="42" lean-forward="false" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -1814,18 +1662,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/espace_personnel_utilisateur.php">
+    <entry file="file://$PROJECT_DIR$/controlleur/espace_parents.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="26" column="42" lean-forward="false" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+        <state relative-caret-position="155">
+          <caret line="75" column="14" lean-forward="true" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
+          <folding>
+            <element signature="e#6#94#0#PHP" expanded="true" />
+            <marker date="1515759236169" expanded="true" signature="166:238" ph="SELECT numEn... enfant" />
+            <marker date="1515759236169" expanded="true" signature="258:350" ph="SELECT monta... compte" />
+            <marker date="1515759236169" expanded="true" signature="374:518" ph="INSERT INTO enfant... " />
+            <marker date="1515759236169" expanded="true" signature="538:614" ph="INSERT INTO compte... " />
+            <marker date="1515759236169" expanded="true" signature="1511:1586" ph="SELECT numUt... utilisateur" />
+            <marker date="1515759236169" expanded="true" signature="2095:2200" ph="INSERT INTO ENFANT... " />
+            <marker date="1515759236169" expanded="true" signature="2095:2201" ph="INSERT INTO ENFANT... " />
+            <marker date="1515759236169" expanded="true" signature="2317:2393" ph="SELECT numUt... utilisateur" />
+            <marker date="1515759236169" expanded="true" signature="2696:2802" ph="SELECT e.num... enfant" />
+            <marker date="1515759236169" expanded="true" signature="3369:3436" ph="INSERT INTO COMPTE... " />
+            <marker date="1515759236169" expanded="true" signature="3538:3644" ph="SELECT e.num... enfant" />
+            <marker date="1515759236169" expanded="true" signature="3864:3940" ph="SELECT e.num... enfant" />
+            <marker date="1515759236169" expanded="true" signature="3864:3970" ph="SELECT e.num... enfant" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlleur/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="74" column="7" lean-forward="false" selection-start-line="73" selection-start-column="41" selection-end-line="74" selection-end-column="7" />
+          <folding>
+            <marker date="1515750051708" expanded="true" signature="788:883" ph="SELECT numUt... utilisateur" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlleur/espace_utilisateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding>
+            <marker date="1515770242517" expanded="true" signature="955:1015" ph="INSERT INTO COURSE... " />
+            <marker date="1515770242517" expanded="true" signature="1166:1227" ph="SELECT numPr... PRODUIT" />
+            <marker date="1515770242517" expanded="true" signature="1455:1506" ph="SELECT numEn... ENFANT" />
+            <marker date="1515770242517" expanded="true" signature="1455:1533" ph="SELECT numEn... ENFANT" />
+            <marker date="1515770242517" expanded="true" signature="1809:1843" ph="SELECT numCo... ENFANT" />
+            <marker date="1515770242517" expanded="true" signature="1809:1857" ph="SELECT numCo... ENFANT" />
+            <marker date="1515770242517" expanded="true" signature="1809:1858" ph="SELECT numCo... ENFANT" />
+            <marker date="1515770242517" expanded="true" signature="2027:2089" ph="INSERT INTO COMPOSITION... " />
+            <marker date="1515770242517" expanded="true" signature="2189:2233" ph="SELECT prix PRODUIT" />
+            <marker date="1515770242517" expanded="true" signature="2189:2234" ph="SELECT prix PRODUIT" />
+            <marker date="1515770242517" expanded="true" signature="2423:2493" ph="INSERT INTO COMPTE... " />
+            <marker date="1515770242517" expanded="true" signature="2595:2659" ph="UPDATE STOCK... " />
+            <marker date="1515770242517" expanded="true" signature="2595:2660" ph="UPDATE STOCK... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baseRugby.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="964">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="76" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/formulaire_connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <marker date="1515749941155" expanded="true" signature="1934:1952" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/formulaire_inscription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="53" lean-forward="false" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+          <folding>
+            <marker date="1515320717037" expanded="true" signature="2900:2918" ph="..." />
+            <marker date="1515320717037" expanded="true" signature="3163:3181" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vue/espace_personnel_parents.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="21" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/espace_personnel_president.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/espace_personnel_utilisateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
           <folding />
         </state>
       </provider>
