@@ -59,12 +59,13 @@ if(empty(stripslashes(file_get_contents("php://input"))))
     $data = json_decode(stripslashes(file_get_contents("php://input")), true);
     if($data['commande'] == "inscription")
     {
+        $prenomEnfant = $data['prenom'];
 
         $verifierEnfantExiste = "SELECT numEnfant FROM enfant WHERE numUtilisateur= :id AND prenom = :prenom";
-        $resExist = $bd->prepare($verifierEnfantExiste2);
+        $resExist = $bd->prepare($verifierEnfantExiste);
         $resExist->execute(array(
             'id' => $id,
-            'prenom' => $prenom
+            'prenom' => $prenomEnfant
         ));
         $row = $resExist->fetchALL();
 
@@ -73,13 +74,12 @@ if(empty(stripslashes(file_get_contents("php://input"))))
         }
         else {
 
-            $nom = $data['nom'];
-            $prenom = $data['prenom'];
+            $nomEnfant = $data['nom'];
             $age = $data['age'];
-            $telPrarent = $data['telParent'];
+            $telParent = $data['telParent'];
             $categorie = $data['categorie'];
 
-            $sql = "INSERT INTO ENFANT VALUES ('','$nom','$prenom','$age','$telPrarent','$mail','$categorie','$id'";
+            $sql = "INSERT INTO ENFANT VALUES ('','$nom','$prenom','$age','$telParent','$mail','$categorie','$id'";
             $ressql = $bd->prepare($sql);
             $ressql->execute();
 
@@ -93,7 +93,7 @@ if(empty(stripslashes(file_get_contents("php://input"))))
 
             if ($idEnfant) {
 
-                $sqlAfficher = "SELECT e.numEnfant, e.prenom, SUM(montant) AS solde FROM enfant e, compte c WHERE e.numUtilisateur = :id AND c.numEnfant = :idEnfant";
+                $sqlAfficher = "SELECT e.numEnfant, e.prenom, SUM(montant) AS solde FROM enfant e, compte c GROUP BY e.numEnfant, e.prenom";
                 $resAfficher = $bd->prepare($sqlAfficher);
                 $resAfficher->execute(array(
                     'id' => $id,
@@ -106,17 +106,28 @@ if(empty(stripslashes(file_get_contents("php://input"))))
             }
         }
 
-    } else if($data['commande'] == "ajouter") {
+    } else if($data['commande'] == "ajouterArgent") {
 
+        $date= date();
+        $montant = $data['montant'];
+        $numEnfant = $data['numEnfant'];
+
+        $sql ="INSERT INTO COMPTE VALUES('','$date','$montant','$id','$numEnfant')";
+        $sqlAjouter = $bd->prepare($sql);
+        $sqlAjouter->execute();
+
+        $sqlAfficher = "SELECT e.numEnfant, e.prenom, SUM(montant) AS solde FROM enfant e, compte c GROUP BY e.numEnfant, e.prenom";
+        $resAfficher = $bd->prepare($sqlAfficher);
+        $resAfficher->execute();
+
+        echo json_encode($resAfficher->fetchAll());
 
     }else if ($data['commande'] == "afficherEnfant"){
 
-        $sqlAfficher = "SELECT e.numEnfant, e.prenom, SUM(montant) AS solde FROM enfant e, compte c WHERE e.numUtilisateur = :id AND c.numEnfant = :idEnfant";
+        $sqlAfficher = "SELECT e.numEnfant, e.prenom, SUM(montant) AS solde FROM enfant e, compte c GROUP BY e.numEnfant, e.prenom";
         $resAfficher = $bd->prepare($sqlAfficher);
-        $resAfficher->execute(array(
-            'id' => $id,
-            'idEnfant' => $idEnfant
-        ));
+        $resAfficher->execute();
+
         echo json_encode($resAfficher->fetchAll());
 
     }
