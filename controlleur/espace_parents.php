@@ -79,7 +79,7 @@ if(empty(stripslashes(file_get_contents("php://input"))))
             $telParent = $data['telParent'];
             $categorie = $data['categorie'];
 
-            $sql = "INSERT INTO ENFANT VALUES ('','$nom','$prenom','$age','$telParent','$mail','$categorie','$id'";
+            $sql = "INSERT INTO ENFANT VALUES ('','$nomEnfant','$prenomEnfant','$age','$telParent','$mail','$categorie','$id'";
             $ressql = $bd->prepare($sql);
             $ressql->execute();
 
@@ -87,7 +87,7 @@ if(empty(stripslashes(file_get_contents("php://input"))))
             $resExist2 = $bd->prepare($verifierEnfantExiste2);
             $resExist2->execute(array(
                 'id' => $id,
-                'prenom' => $prenom
+                'prenom' => $prenomEnfant
             ));
             $idEnfant = $resExist2->fetchAll();
 
