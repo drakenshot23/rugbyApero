@@ -60,7 +60,7 @@ if(isset($_POST['email']) && isset($_POST['mdp']))
         $_SESSION['id'] = $row[0]['numUtilisateur'];
         $_SESSION['nom'] = $row[0]['nom'];
         $_SESSION['type'] = $row[0]['typeGestionnaire'];
-        $_SESSION['mail'] = $row[0]['mail'];
+        $_SESSION['mail'] = $_POST['email'];
 
         if ($_SESSION['type']=='parent'){
             header("Location: espace_personnel_parents.php");

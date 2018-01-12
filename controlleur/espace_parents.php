@@ -56,17 +56,20 @@ if(empty(stripslashes(file_get_contents("php://input"))))
     $data = json_decode(stripslashes(file_get_contents("php://input")), true);
     if($data['commande'] == "inscription")
     {
-        inscription($data, $mail,$id,$bd, $idEnfant);
+        $res = inscription($data, $mail,$id,$bd, $err);
+        echo $res;
     } else if($data['commande'] == "ajouter")
     {
         $date = date();
-        ajouterArgent($data,$id,$bd,$date);
+        $res = ajouterArgent($data,$id,$bd,$date,$err);
+        echo $res;
     }
 }
 
 
-function inscription($data, $mail, $id,$bd)
+function inscription($data, $mail, $id,$bd,$err)
 {
+
     $prenom = $data['prenom'];
     $nom2 = $data['nom'];
     $stmt = $bd->prepare("SELECT numEnfant FROM ENFANT WHERE numUtilisateur = $id AND nom = $nom2 AND prenom = $prenom");
@@ -74,7 +77,7 @@ function inscription($data, $mail, $id,$bd)
     $row = $stmt->fetchAll();
 
     if($row){
-        echo "err"; //existe dans la BD
+        return $err; //existe dans la BD
     }
     else {
 
@@ -96,27 +99,30 @@ function inscription($data, $mail, $id,$bd)
 
         if ($idEnfant) {
             $res = afficherEnfant($bd, $id, $idEnfant);
-            echo $res;
+            return $res;
         } else {
-            echo "err";
+            return $err;
         }
 
     }
 
 }
 
-function ajouterArgent($data,$id,$bd, $idEnfant,$date)
+function ajouterArgent($data,$id,$bd, $idEnfant,$date, $err)
 {
 
     $stmt = $bd->prepare("INSERT INTO COMPTE VALUES(?,?,?,?)");
     $stmt->binParam(1, $date);
     $stmt->binParam(2, $data['montant']);
     $stmt->binParam(3, $id);
-    $stmt->binParam(4, $idEnfant);
+    $stmt->binParam(4, $data['numEnfant']);
 
     $idEnfant = $bd->execute("SELECT numEnfant FROM ENFANT WHERE numUtilisateur = $id");
 
     $stmt->execute();
+
+    $tab = afficherEnfant($bd,$id,$idEnfant);
+    return $tab;
 
 }
 

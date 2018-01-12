@@ -5,7 +5,7 @@
         if ($_SESSION['type']=='parent'){
             header("Location: espace_personnel_parents.php");
         }
-        else if ($_SESSION['type']=='parenUtilisateur'){
+        else if ($_SESSION['type']=='parentUtilisateur'){
             header("Location: espace_utilisateur.php");
         }
         else if  ($_SESSION['type']=='presidentApero'){
