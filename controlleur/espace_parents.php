@@ -59,82 +59,67 @@ if(empty(stripslashes(file_get_contents("php://input"))))
     $data = json_decode(stripslashes(file_get_contents("php://input")), true);
     if($data['commande'] == "inscription")
     {
-        $res = inscription($data, $mail,$id,$bd, $err);
-        echo $res;
-    } else if($data['commande'] == "ajouter") {
-        $date = date();
-        $res = ajouterArgent($data, $id, $bd, $date, $err);
-        echo $res;
-    }else if ($data['commande'] == "afficherEnfant"){
-        $res = afficherEnfant($bd,$id,$idEnfant);
-        echo $res;
-    }
-}
 
+        $verifierEnfantExiste = "SELECT numEnfant FROM enfant WHERE numUtilisateur= :id AND prenom = :prenom";
+        $resExist = $bd->prepare($verifierEnfantExiste2);
+        $resExist->execute(array(
+            'id' => $id,
+            'prenom' => $prenom
+        ));
+        $row = $resExist->fetchALL();
 
-function inscription($data, $mail, $id,$bd,$err)
-{
+        if($row){
+            echo json_encode($err);
+        }
+        else {
 
-    $prenom = $data['prenom'];
-    $nom2 = $data['nom'];
-    $stmt = $bd->prepare("SELECT numEnfant FROM ENFANT WHERE numUtilisateur = $id AND nom = $nom2 AND prenom = $prenom");
-    $stmt->execute();
-    $row = $stmt->fetchAll();
+            $nom = $data['nom'];
+            $prenom = $data['prenom'];
+            $age = $data['age'];
+            $telPrarent = $data['telParent'];
+            $categorie = $data['categorie'];
 
-    if($row){
-        return $err; //existe dans la BD
-    }
-    else {
+            $sql = "INSERT INTO ENFANT VALUES ('','$nom','$prenom','$age','$telPrarent','$mail','$categorie','$id' )";
+            $ressql = $bd->prepare($sql);
+            $ressql->execute();
 
-        $stmt2 = $bd->prepare("INSERT INTO ENFANT VALUES(?,?,?,?,?,?,?)");
-        $stmt2->binParam(1, $data['nom']);
-        $stmt2->binParam(2, $data['prenom']);
-        $stmt2->binParam(3, $data['age']);
-        $stmt2->binParam(4, $data['telParent']);
-        $stmt2->binParam(5, $mail);
-        $stmt2->binParam(6, $data['categorie']);
-        $stmt2->binParam(7, $id);
+            $verifierEnfantExiste2 = "SELECT numEnfant FROM enfant WHERE numUtilisateur = :id AND prenom = :prenom";
+            $resExist2 = $bd->prepare($verifierEnfantExiste2);
+            $resExist2->execute(array(
+                'id' => $id,
+                'prenom' => $prenom
+            ));
+            $idEnfant = $resExist2->fetchAll();
 
-        $stmt2->execute();
+            if ($idEnfant) {
 
-        $prenom = $data['prenom'];
-        $stmt3 = $bd->prepare("SELECT numEnfant FROM ENFANT WHERE numUtilisateur = $id AND prenom = $prenom");
-        $stmt3->execute();
-        $idEnfant = $stmt3->fetchAll();
+                $sqlAfficher = "SELECT e.numEnfant, e.prenom, SUM(montant) AS solde FROM enfant e, compte c WHERE e.numUtilisateur = :id AND c.numEnfant = :idEnfant";
+                $resAfficher = $bd->prepare($sqlAfficher);
+                $resAfficher->execute(array(
+                    'id' => $id,
+                    'idEnfant' => $idEnfant
+                ));
+                echo json_encode($resAfficher->fetchAll());
 
-        if ($idEnfant) {
-            $res = afficherEnfant($bd, $id, $idEnfant);
-            return $res;
-        } else {
-            return $err;
+            } else {
+                echo json_encode($err);
+            }
         }
 
+    } else if($data['commande'] == "ajouter") {
+
+
+    }else if ($data['commande'] == "afficherEnfant"){
+
+        $sqlAfficher = "SELECT e.numEnfant, e.prenom, SUM(montant) AS solde FROM enfant e, compte c WHERE e.numUtilisateur = :id AND c.numEnfant = :idEnfant";
+        $resAfficher = $bd->prepare($sqlAfficher);
+        $resAfficher->execute(array(
+            'id' => $id,
+            'idEnfant' => $idEnfant
+        ));
+        echo json_encode($resAfficher->fetchAll());
+
     }
-
 }
 
-function ajouterArgent($data,$id,$bd, $idEnfant,$date, $err)
-{
-
-    $stmt = $bd->prepare("INSERT INTO COMPTE VALUES(?,?,?,?)");
-    $stmt->binParam(1, $date);
-    $stmt->binParam(2, $data['montant']);
-    $stmt->binParam(3, $id);
-    $stmt->binParam(4, $data['numEnfant']);
-
-    $idEnfant = $bd->execute("SELECT numEnfant FROM ENFANT WHERE numUtilisateur = $id");
-
-    $stmt->execute();
-
-    $tab = afficherEnfant($bd,$id,$idEnfant);
-    return $tab;
-
-}
-
-function afficherEnfant($bd,$id,$idEnfant){
-    $stmt = $bd->prepare("SELECT E.numEnfant, E.prenom, SUM(montant) AS solde FROM ENFANT E, COMPTE C where E.numUtilisateur = $id AND C.numEnfant = $idEnfant");
-    $stmt->execute();
-    $tab = json_encode($stmt->fetchAll());
-    return $tab;
-}
 ?>
