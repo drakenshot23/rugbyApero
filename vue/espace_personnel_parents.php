@@ -15,12 +15,19 @@
     $id = null;
     $nom = null;
 
-    if(isset($_SESSION['id']) && isset($_SESSION['nom']))
-    {
-        $id = $_SESSION['id'];
-        $nom = $_SESSION['nom'];
+if(!empty($_SESSION) || isset($_SESSION['id']) || isset($_SESSION['nom']) || isset($_SESSION['type']) )
+{
+    if ($_SESSION['type']=='parent'){
+        header("Location: espace_personnel_parents.php");
     }
-
+    else if ($_SESSION['type']=='parentUtilisateur'){
+        header("Location: espace_utilisateur.php");
+    }
+    else if  ($_SESSION['type']=='presidentApero'){
+        header("Location: espace_president.php");
+    }
+    header("Location: ../index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">

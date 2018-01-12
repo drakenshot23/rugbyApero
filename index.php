@@ -15,6 +15,9 @@
     {
         header("Location: vue/espace_personnel_parents.php");
     }
+    if(!empty($_SESSION) || (isset($_SESSION['type']) && $_SESSION['type'] == 'presidentApero')){
+        header("Location: vue/espace_personnel_president.php");
+    }
 ?>
 
 <!DOCTYPE html>
