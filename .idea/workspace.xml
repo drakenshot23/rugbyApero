@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6b41f5a1-4aa1-499e-98f9-ef39ad1e38ff" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controlleur/connexion.php" afterPath="$PROJECT_DIR$/controlleur/connexion.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controlleur/espace_parents.php" afterPath="$PROJECT_DIR$/controlleur/espace_parents.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/formulaire_connexion.php" afterPath="$PROJECT_DIR$/vue/formulaire_connexion.php" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,32 +30,32 @@
       <file leaf-file-name="espace_parents.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controlleur/espace_parents.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="104" column="9" lean-forward="true" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
+            <state relative-caret-position="542">
+              <caret line="64" column="50" lean-forward="false" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
               <folding>
                 <element signature="e#6#94#0#PHP" expanded="true" />
-                <marker date="1515750358501" expanded="true" signature="132:204" ph="SELECT numEn... enfant" />
-                <marker date="1515750358501" expanded="true" signature="224:316" ph="SELECT monta... compte" />
-                <marker date="1515750358501" expanded="true" signature="340:484" ph="INSERT INTO enfant... " />
-                <marker date="1515750358501" expanded="true" signature="504:580" ph="INSERT INTO compte... " />
-                <marker date="1515750358501" expanded="true" signature="1773:1825" ph="SELECT numEn... ENFANT" />
-                <marker date="1515750358501" expanded="true" signature="1773:1826" ph="SELECT numEn... ENFANT" />
-                <marker date="1515750358501" expanded="true" signature="1773:1839" ph="SELECT numEn... ENFANT" />
-                <marker date="1515750358501" expanded="true" signature="1773:1840" ph="SELECT numEn... ENFANT" />
-                <marker date="1515750358501" expanded="true" signature="1773:1857" ph="SELECT numEn... ENFANT" />
-                <marker date="1515750358501" expanded="true" signature="1773:1858" ph="SELECT numEn... ENFANT" />
-                <marker date="1515750358501" expanded="true" signature="2026:2066" ph="INSERT INTO ENFANT... " />
-                <marker date="1515750358501" expanded="true" signature="2465:2517" ph="SELECT numEn... ENFANT" />
-                <marker date="1515750358501" expanded="true" signature="2465:2533" ph="SELECT numEn... ENFANT" />
-                <marker date="1515750358501" expanded="true" signature="2465:2534" ph="SELECT numEn... ENFANT" />
-                <marker date="1515750358501" expanded="true" signature="2465:2535" ph="SELECT numEn... ENFANT" />
-                <marker date="1515750358501" expanded="true" signature="2872:2906" ph="INSERT INTO ENFANT... " />
-                <marker date="1515750358501" expanded="true" signature="3087:3139" ph="SELECT numEn... ENFANT" />
-                <marker date="1515750358501" expanded="true" signature="3307:3408" ph="SELECT numEn... ENFANT" />
-                <marker date="1515750358501" expanded="true" signature="3307:3409" ph="SELECT numEn... ENFANT" />
-                <marker date="1515750358501" expanded="true" signature="3307:3421" ph="SELECT numEn... ENFANT" />
-                <marker date="1515750358501" expanded="true" signature="3307:3430" ph="SELECT numEn... ENFANT" />
-                <marker date="1515750358501" expanded="true" signature="3307:3431" ph="SELECT numEn... ENFANT" />
+                <marker date="1515750880834" expanded="true" signature="132:204" ph="SELECT numEn... enfant" />
+                <marker date="1515750880834" expanded="true" signature="224:316" ph="SELECT monta... compte" />
+                <marker date="1515750880834" expanded="true" signature="340:484" ph="INSERT INTO enfant... " />
+                <marker date="1515750880834" expanded="true" signature="504:580" ph="INSERT INTO compte... " />
+                <marker date="1515750880834" expanded="true" signature="1896:1948" ph="SELECT numEn... ENFANT" />
+                <marker date="1515750880834" expanded="true" signature="1896:1949" ph="SELECT numEn... ENFANT" />
+                <marker date="1515750880834" expanded="true" signature="1896:1962" ph="SELECT numEn... ENFANT" />
+                <marker date="1515750880834" expanded="true" signature="1896:1963" ph="SELECT numEn... ENFANT" />
+                <marker date="1515750880834" expanded="true" signature="1896:1980" ph="SELECT numEn... ENFANT" />
+                <marker date="1515750880834" expanded="true" signature="1896:1981" ph="SELECT numEn... ENFANT" />
+                <marker date="1515750880834" expanded="true" signature="2149:2189" ph="INSERT INTO ENFANT... " />
+                <marker date="1515750880834" expanded="true" signature="2588:2640" ph="SELECT numEn... ENFANT" />
+                <marker date="1515750880834" expanded="true" signature="2588:2656" ph="SELECT numEn... ENFANT" />
+                <marker date="1515750880834" expanded="true" signature="2588:2657" ph="SELECT numEn... ENFANT" />
+                <marker date="1515750880834" expanded="true" signature="2588:2658" ph="SELECT numEn... ENFANT" />
+                <marker date="1515750880834" expanded="true" signature="2995:3029" ph="INSERT INTO ENFANT... " />
+                <marker date="1515750880834" expanded="true" signature="3210:3262" ph="SELECT numEn... ENFANT" />
+                <marker date="1515750880834" expanded="true" signature="3430:3531" ph="SELECT numEn... ENFANT" />
+                <marker date="1515750880834" expanded="true" signature="3430:3532" ph="SELECT numEn... ENFANT" />
+                <marker date="1515750880834" expanded="true" signature="3430:3544" ph="SELECT numEn... ENFANT" />
+                <marker date="1515750880834" expanded="true" signature="3430:3553" ph="SELECT numEn... ENFANT" />
+                <marker date="1515750880834" expanded="true" signature="3430:3554" ph="SELECT numEn... ENFANT" />
               </folding>
             </state>
           </provider>
@@ -66,8 +64,8 @@
       <file leaf-file-name="connexion.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controlleur/connexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="62" column="44" lean-forward="true" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
+            <state relative-caret-position="440">
+              <caret line="67" column="56" lean-forward="true" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
               <folding>
                 <marker date="1515750051708" expanded="true" signature="788:883" ph="SELECT numUt... utilisateur" />
               </folding>
@@ -78,73 +76,10 @@
       <file leaf-file-name="formulaire_connexion.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vue/formulaire_connexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+            <state relative-caret-position="30">
+              <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
               <folding>
                 <marker date="1515749941155" expanded="true" signature="1934:1952" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="baseRugby.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/baseRugby.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1155">
-              <caret line="77" column="32" lean-forward="true" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="espace_president.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controlleur/espace_president.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="112" column="9" lean-forward="false" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
-              <folding>
-                <element signature="e#6#89#0#PHP" expanded="true" />
-                <marker date="1515703804605" expanded="true" signature="1292:1342" ph="SELECT numPr... PRODUIT" />
-                <marker date="1515703804605" expanded="true" signature="1292:1343" ph="SELECT numPr... PRODUIT" />
-                <marker date="1515703804605" expanded="true" signature="1495:1530" ph="INSERT INTO PRODUIT... " />
-                <marker date="1515703804605" expanded="true" signature="1791:1841" ph="SELECT numPr... PRODUIT" />
-                <marker date="1515703804605" expanded="true" signature="1976:2005" ph="INSERT INTO STOCK... " />
-                <marker date="1515703804605" expanded="true" signature="2179:2224" ph="SELECT numSt... STOCK" />
-                <marker date="1515703804605" expanded="true" signature="2640:2666" ph="UPDATE PRODU... " />
-                <marker date="1515703804605" expanded="true" signature="2640:2684" ph="UPDATE PRODU... " />
-                <marker date="1515703804605" expanded="true" signature="2739:2751" ph="DELETE FROM " />
-                <marker date="1515703804605" expanded="true" signature="2739:2758" ph="DELETE FROM " />
-                <marker date="1515703804605" expanded="true" signature="2739:2760" ph="DELETE FROM " />
-                <marker date="1515703804605" expanded="true" signature="2780:2792" ph="DELETE FROM " />
-                <marker date="1515703804605" expanded="true" signature="2780:2797" ph="DELETE FROM " />
-                <marker date="1515703804605" expanded="true" signature="2780:2799" ph="DELETE FROM " />
-                <marker date="1515703804605" expanded="true" signature="2819:2831" ph="DELETE FROM " />
-                <marker date="1515703804605" expanded="true" signature="2819:2837" ph="DELETE FROM " />
-                <marker date="1515703804605" expanded="true" signature="2819:2839" ph="DELETE FROM " />
-                <marker date="1515703804605" expanded="true" signature="2859:2871" ph="DELETE FROM " />
-                <marker date="1515703804605" expanded="true" signature="2859:2877" ph="DELETE FROM " />
-                <marker date="1515703804605" expanded="true" signature="2899:2923" ph="DELETE FROM " />
-                <marker date="1515703804605" expanded="true" signature="2945:2957" ph="DELETE FROM " />
-                <marker date="1515703804605" expanded="true" signature="2945:2963" ph="DELETE FROM " />
-                <marker date="1515703804605" expanded="true" signature="2985:3015" ph="DELETE FROM " />
-                <marker date="1515703804605" expanded="true" signature="2985:3083" ph="DELETE FROM " />
-                <marker date="1515703804605" expanded="true" signature="3181:3218" ph="DELETE FROM " />
-                <marker date="1515703804605" expanded="true" signature="3181:3225" ph="DELETE FROM " />
-                <marker date="1515703804605" expanded="true" signature="3291:3321" ph="SELECT nom, Produit" />
-                <marker date="1515703804605" expanded="true" signature="3291:3327" ph="SELECT nomPr... PRODUIT" />
-                <marker date="1515703804605" expanded="true" signature="3291:3330" ph="SELECT nomPr... Produit" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="espace_utilisateur.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controlleur/espace_utilisateur.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-              <folding>
-                <element signature="e#6#89#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -431,7 +366,7 @@
       <workItem from="1515533953732" duration="113000" />
       <workItem from="1515534087513" duration="2587000" />
       <workItem from="1515581571074" duration="5196000" />
-      <workItem from="1515749272589" duration="1011000" />
+      <workItem from="1515749272589" duration="1516000" />
     </task>
     <task id="LOCAL-00001" summary="petite modif">
       <created>1514410235034</created>
@@ -524,11 +459,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515704356715</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="correction">
+      <created>1515750389687</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1515750389687</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113360000" />
+    <option name="totallyTimeSpent" value="113865000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -543,7 +485,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15138888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21458334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -658,7 +600,8 @@
     <MESSAGE value="pages president et utiisateur + js" />
     <MESSAGE value="ajout de test d'erreur dans ajouter enfant et ajouter produit" />
     <MESSAGE value="ajout de test d'erreur dans ajouter enfant et ajouter produit&#10;vérification q'un enfant n'existe pad déja dans la bd" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout de test d'erreur dans ajouter enfant et ajouter produit&#10;vérification q'un enfant n'existe pad déja dans la bd" />
+    <MESSAGE value="correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -908,17 +851,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/espace_personnel_parents.php">
+    <entry file="file://$PROJECT_DIR$/controlleur/inscription.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="75" column="62" lean-forward="false" selection-start-line="75" selection-start-column="62" selection-end-line="75" selection-end-column="62" />
-          <folding />
+        <state relative-caret-position="275">
+          <caret line="72" column="29" lean-forward="true" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
+          <folding>
+            <marker date="1515320716962" expanded="true" signature="1555:1613" ph="SELECT numUt... utilisateur" />
+            <marker date="1515320716962" expanded="true" signature="1884:1995" ph="INSERT INTO utilisateur... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlleur/espace_utilisateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#89#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controlleur/espace_president.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
+        <state relative-caret-position="140">
           <caret line="112" column="9" lean-forward="false" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
           <folding>
             <element signature="e#6#89#0#PHP" expanded="true" />
@@ -963,41 +919,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controlleur/inscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="72" column="29" lean-forward="true" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
-          <folding>
-            <marker date="1515320716962" expanded="true" signature="1555:1613" ph="SELECT numUt... utilisateur" />
-            <marker date="1515320716962" expanded="true" signature="1884:1995" ph="INSERT INTO utilisateur... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlleur/espace_utilisateur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#89#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vue/formulaire_connexion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        <state relative-caret-position="30">
+          <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
           <folding>
             <marker date="1515749941155" expanded="true" signature="1934:1952" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vue/espace_personnel_parents.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1120">
+          <caret line="75" column="62" lean-forward="false" selection-start-line="75" selection-start-column="62" selection-end-line="75" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controlleur/connexion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="62" column="44" lean-forward="true" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
+        <state relative-caret-position="440">
+          <caret line="67" column="56" lean-forward="true" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
           <folding>
             <marker date="1515750051708" expanded="true" signature="788:883" ph="SELECT numUt... utilisateur" />
           </folding>
@@ -1006,32 +949,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controlleur/espace_parents.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="104" column="9" lean-forward="true" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
+        <state relative-caret-position="542">
+          <caret line="64" column="50" lean-forward="false" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
           <folding>
             <element signature="e#6#94#0#PHP" expanded="true" />
-            <marker date="1515750358501" expanded="true" signature="132:204" ph="SELECT numEn... enfant" />
-            <marker date="1515750358501" expanded="true" signature="224:316" ph="SELECT monta... compte" />
-            <marker date="1515750358501" expanded="true" signature="340:484" ph="INSERT INTO enfant... " />
-            <marker date="1515750358501" expanded="true" signature="504:580" ph="INSERT INTO compte... " />
-            <marker date="1515750358501" expanded="true" signature="1773:1825" ph="SELECT numEn... ENFANT" />
-            <marker date="1515750358501" expanded="true" signature="1773:1826" ph="SELECT numEn... ENFANT" />
-            <marker date="1515750358501" expanded="true" signature="1773:1839" ph="SELECT numEn... ENFANT" />
-            <marker date="1515750358501" expanded="true" signature="1773:1840" ph="SELECT numEn... ENFANT" />
-            <marker date="1515750358501" expanded="true" signature="1773:1857" ph="SELECT numEn... ENFANT" />
-            <marker date="1515750358501" expanded="true" signature="1773:1858" ph="SELECT numEn... ENFANT" />
-            <marker date="1515750358501" expanded="true" signature="2026:2066" ph="INSERT INTO ENFANT... " />
-            <marker date="1515750358501" expanded="true" signature="2465:2517" ph="SELECT numEn... ENFANT" />
-            <marker date="1515750358501" expanded="true" signature="2465:2533" ph="SELECT numEn... ENFANT" />
-            <marker date="1515750358501" expanded="true" signature="2465:2534" ph="SELECT numEn... ENFANT" />
-            <marker date="1515750358501" expanded="true" signature="2465:2535" ph="SELECT numEn... ENFANT" />
-            <marker date="1515750358501" expanded="true" signature="2872:2906" ph="INSERT INTO ENFANT... " />
-            <marker date="1515750358501" expanded="true" signature="3087:3139" ph="SELECT numEn... ENFANT" />
-            <marker date="1515750358501" expanded="true" signature="3307:3408" ph="SELECT numEn... ENFANT" />
-            <marker date="1515750358501" expanded="true" signature="3307:3409" ph="SELECT numEn... ENFANT" />
-            <marker date="1515750358501" expanded="true" signature="3307:3421" ph="SELECT numEn... ENFANT" />
-            <marker date="1515750358501" expanded="true" signature="3307:3430" ph="SELECT numEn... ENFANT" />
-            <marker date="1515750358501" expanded="true" signature="3307:3431" ph="SELECT numEn... ENFANT" />
+            <marker date="1515750880834" expanded="true" signature="132:204" ph="SELECT numEn... enfant" />
+            <marker date="1515750880834" expanded="true" signature="224:316" ph="SELECT monta... compte" />
+            <marker date="1515750880834" expanded="true" signature="340:484" ph="INSERT INTO enfant... " />
+            <marker date="1515750880834" expanded="true" signature="504:580" ph="INSERT INTO compte... " />
+            <marker date="1515750880834" expanded="true" signature="1896:1948" ph="SELECT numEn... ENFANT" />
+            <marker date="1515750880834" expanded="true" signature="1896:1949" ph="SELECT numEn... ENFANT" />
+            <marker date="1515750880834" expanded="true" signature="1896:1962" ph="SELECT numEn... ENFANT" />
+            <marker date="1515750880834" expanded="true" signature="1896:1963" ph="SELECT numEn... ENFANT" />
+            <marker date="1515750880834" expanded="true" signature="1896:1980" ph="SELECT numEn... ENFANT" />
+            <marker date="1515750880834" expanded="true" signature="1896:1981" ph="SELECT numEn... ENFANT" />
+            <marker date="1515750880834" expanded="true" signature="2149:2189" ph="INSERT INTO ENFANT... " />
+            <marker date="1515750880834" expanded="true" signature="2588:2640" ph="SELECT numEn... ENFANT" />
+            <marker date="1515750880834" expanded="true" signature="2588:2656" ph="SELECT numEn... ENFANT" />
+            <marker date="1515750880834" expanded="true" signature="2588:2657" ph="SELECT numEn... ENFANT" />
+            <marker date="1515750880834" expanded="true" signature="2588:2658" ph="SELECT numEn... ENFANT" />
+            <marker date="1515750880834" expanded="true" signature="2995:3029" ph="INSERT INTO ENFANT... " />
+            <marker date="1515750880834" expanded="true" signature="3210:3262" ph="SELECT numEn... ENFANT" />
+            <marker date="1515750880834" expanded="true" signature="3430:3531" ph="SELECT numEn... ENFANT" />
+            <marker date="1515750880834" expanded="true" signature="3430:3532" ph="SELECT numEn... ENFANT" />
+            <marker date="1515750880834" expanded="true" signature="3430:3544" ph="SELECT numEn... ENFANT" />
+            <marker date="1515750880834" expanded="true" signature="3430:3553" ph="SELECT numEn... ENFANT" />
+            <marker date="1515750880834" expanded="true" signature="3430:3554" ph="SELECT numEn... ENFANT" />
           </folding>
         </state>
       </provider>

@@ -58,10 +58,12 @@ if(empty(stripslashes(file_get_contents("php://input"))))
     {
         $res = inscription($data, $mail,$id,$bd, $err);
         echo $res;
-    } else if($data['commande'] == "ajouter")
-    {
+    } else if($data['commande'] == "ajouter") {
         $date = date();
-        $res = ajouterArgent($data,$id,$bd,$date,$err);
+        $res = ajouterArgent($data, $id, $bd, $date, $err);
+        echo $res;
+    }else if ($data['commande'] == "afficherEnfant"){
+        $res = afficherEnfant($bd,$id,$idEnfant);
         echo $res;
     }
 }
