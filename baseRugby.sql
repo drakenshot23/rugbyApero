@@ -9,7 +9,7 @@
 
 CREATE TABLE Utilisateur(
         numUtilisateur int (11) Auto_increment  NOT NULL ,
-        typeGestionnaire   ENUM('parent', 'parenUtilisateur', 'presidentApero'),
+        typeGestionnaire   ENUM('parent', 'parentUtilisateur', 'presidentApero'),
         nom            Varchar (25) ,
         prenom         Varchar (25) ,
         mail           Varchar (50) ,

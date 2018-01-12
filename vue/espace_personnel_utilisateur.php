@@ -15,11 +15,18 @@ if(empty($_SESSION))
 $id = null;
 $nom = null;
 
-if(isset($_SESSION['id']) && isset($_SESSION['nom']))
+if(isset($_SESSION['type']) && $_SESSION['type'] === "parentUtilisateur")
 {
-    $id = $_SESSION['id'];
-    $nom = $_SESSION['nom'];
+    if(isset($_SESSION['id']) && isset($_SESSION['nom']))
+    {
+        $id = $_SESSION['id'];
+        $nom = $_SESSION['nom'];
+    }
+} else
+{
+
 }
+
 
 ?>
 <!DOCTYPE html>
@@ -47,6 +54,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['nom']))
                 <li class="nav-item"><a href="#" class="nav-link fa fa-user-plus" >Créer un goûter</a></li>
             </ul>
         </div>
+
     </div>
 
 

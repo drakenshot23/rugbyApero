@@ -7,7 +7,11 @@
  */
 
     session_start();
-    if(!empty($_SESSION) || isset($_SESSION['id']) || isset($_SESSION['nom']))
+    if(!empty($_SESSION) || isset($_SESSION['id']) || isset($_SESSION['nom']) || (isset($_SESSION['type']) && $_SESSION['type'] == 'parentUtilisateur'))
+    {
+        header("Location: vue/espace_personnel_utilisateur.php");
+    }
+    if(!empty($_SESSION) || (isset($_SESSION['type']) && $_SESSION['type'] == 'parent'))
     {
         header("Location: vue/espace_personnel_parents.php");
     }
