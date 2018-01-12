@@ -6,6 +6,9 @@
  * Time: 16:35
  */
 
+
+require_once('ConnectPDO.php');
+
 session_start();
 
 $donnesEnfants = "SELECT numEnfant, nom FROM enfant WHERE numUtilisateur = :numUtilisateur";
