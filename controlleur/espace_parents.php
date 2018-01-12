@@ -79,7 +79,7 @@ if(empty(stripslashes(file_get_contents("php://input"))))
             $telPrarent = $data['telParent'];
             $categorie = $data['categorie'];
 
-            $sql = "INSERT INTO ENFANT VALUES ('','$nom','$prenom','$age','$telPrarent','$mail','$categorie','$id' )";
+            $sql = "INSERT INTO ENFANT VALUES ('','$nom','$prenom','$age','$telPrarent','$mail','$categorie','$id'";
             $ressql = $bd->prepare($sql);
             $ressql->execute();
 
