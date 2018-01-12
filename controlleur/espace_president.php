@@ -61,10 +61,9 @@ else {
 
             $nomProduit = $data['nomProduit'];
             $prix = $data['prix'];
-            $qteProduit = $data['qteProduit'];
             $seuilRupture = $data['seuilRupture'];
 
-            $sql2 = "INSERT INTO PRODUIT VALUES('','$nomProduit','$prix','$qteProduit','$seuilRupture',NULL)";
+            $sql2 = "INSERT INTO PRODUIT VALUES('','$nomProduit','$prix',1,'$seuilRupture',NULL)";
             $ajouterPRoduit = $bd->prepare($sql2);
             $ajouterPRoduit->execute();
 
@@ -139,6 +138,10 @@ else {
         $stmt = $bd->prepare("SELECT nomProduit, prix FROM PRODUIT ");
         $stmt->execute();
         echo json_encode($stmt->fetchAll());
+
+    }
+    else if ($data['commande'] == "ajouterUtilisateur"){
+
 
     }
 

@@ -21,10 +21,10 @@ if(!empty($_SESSION) || isset($_SESSION['id']) || isset($_SESSION['nom']) || iss
         header("Location: espace_personnel_parents.php");
     }
     else if ($_SESSION['type']=='parentUtilisateur'){
-        header("Location: espace_utilisateur.php");
+        header("Location: espace_personnel_utilisateur.php");
     }
     else if  ($_SESSION['type']=='presidentApero'){
-        header("Location: espace_president.php");
+        header("Location: espace_personnel_president.php");
     }
     header("Location: ../index.php");
 }
