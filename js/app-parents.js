@@ -19,8 +19,9 @@ let app = new Vue({
         enfantSelectionne: "",
         selectedTab: actionTabs.AJOUTER
     },
-    beforeCreate: function() // se lance avant que le DOM soit initialisé
+    beforeCreate: function() // se lance avant que le DOM soit crée
     {
+        // Recuperer la liste des enfants depuis la base de donnée
         $.ajax({
             method: 'POST',
             url: '../controlleur/espace_parents.php',
@@ -32,17 +33,18 @@ let app = new Vue({
                     let enf = {numEnfant: rep[i]['numEnfant'], prenom: rep[i]['prenom'], solde: rep[i]['solde']};
                     liste.push(enf);
                 }
-                //alert(liste[0]['prenom']);
             }
         });
     },
-    mounted: function () { // Se lance une fois que le DOM est initialisé
+    beforeMount: function() // se lance avant que le DOM soit initialisé
+    {
         this.listeEnfants = liste;
-
+    },
+    mounted: function () { // Se lance une fois que le DOM est initialisé
 
     },
     beforeUpdate: function () {
-        this.enfantSelectionne = liste[0]['prenom'] + " Solde: " + liste[0]['solde'];
+        this.enfantSelectionne = liste[0]['prenom'];
       this.listeEnfants = liste;
     },
     methods: {
@@ -74,7 +76,7 @@ let app = new Vue({
             $.ajax({
                 method: 'POST',
                 url: '../controlleur/espace_parents.php',
-                data: JSON.stringify({}), // envoyer le
+                data: JSON.stringify({commande: "ajouterArgent", }), // envoyer le
                 success: function (data) {
                     let rep = JSON.parse(data);
 
