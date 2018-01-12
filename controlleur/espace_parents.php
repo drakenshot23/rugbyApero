@@ -70,6 +70,7 @@ if(empty(stripslashes(file_get_contents("php://input"))))
         $row = $resExist->fetchALL();
 
         if($row){
+            $err = "L'enfant existe";
             echo json_encode($err);
         }
         else {
@@ -79,7 +80,7 @@ if(empty(stripslashes(file_get_contents("php://input"))))
             $telParent = $data['telParent'];
             $categorie = $data['categorie'];
 
-            $sql = "INSERT INTO ENFANT VALUES ('','$nomEnfant','$prenomEnfant','$age','$telParent','$mail','$categorie','$id'";
+            $sql = "INSERT INTO ENFANT VALUES ('','$nomEnfant','$prenomEnfant','$age','$telParent','$mail','$categorie','$id')";
             $ressql = $bd->prepare($sql);
             $ressql->execute();
 
@@ -102,6 +103,7 @@ if(empty(stripslashes(file_get_contents("php://input"))))
                 echo json_encode($resAfficher->fetchAll());
 
             } else {
+                $err = "Enfant pas ajouté";
                 echo json_encode($err);
             }
         }
