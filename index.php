@@ -6,18 +6,28 @@
  * Time: 21:55
  */
 
-    session_start();
-    if(!empty($_SESSION) || isset($_SESSION['id']) || isset($_SESSION['nom']) || (isset($_SESSION['type']) && $_SESSION['type'] == 'parentUtilisateur'))
-    {
-        header("Location: vue/espace_personnel_utilisateur.php");
-    }
-    if(!empty($_SESSION) || (isset($_SESSION['type']) && $_SESSION['type'] == 'parent'))
-    {
-        header("Location: vue/espace_personnel_parents.php");
-    }
-    if(!empty($_SESSION) || (isset($_SESSION['type']) && $_SESSION['type'] == 'presidentApero')){
-        header("Location: vue/espace_personnel_president.php");
-    }
+session_start();
+
+$id = null;
+$nom = null;
+
+if(!empty($_SESSION['type']) && $_SESSION['type'] == 'presidentApero')
+{
+    header("Location: vue/espace_personnel_president.php");
+} else if(!empty($_SESSION['type']) && $_SESSION['type'] == 'parent')
+{
+    header("Location: vue/espace_personnel_parents.php");
+} else if(!empty($_SESSION['type']) && $_SESSION['type'] == 'parentUtilisateur')
+{
+    header("Location: vue/espace_personnel_utilisateur.php");
+}
+
+if(!empty($_SESSION['id']) && !empty($_SESSION['nom']))
+{
+    $id = $_SESSION['id'];
+    $nom = $_SESSION['nom'];
+}
+
 ?>
 
 <!DOCTYPE html>

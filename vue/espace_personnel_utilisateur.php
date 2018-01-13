@@ -15,11 +15,16 @@ if(empty($_SESSION))
 $id = null;
 $nom = null;
 
-if(isset($_SESSION['id']) && isset($_SESSION['nom']))
+if(!empty($_SESSION['type']) && $_SESSION['type'] == 'presidentApero')
 {
-    $id = $_SESSION['id'];
-    $nom = $_SESSION['nom'];
+    header("Location: espace_personnel_president.php");
+} else if(!empty($_SESSION['type']) && $_SESSION['type'] == 'parent')
+{
+    header("Location: espace_personnel_parents.php");
 }
+
+$id = $_SESSION['id'];
+$nom = $_SESSION['nom'];
 
 ?>
 <!DOCTYPE html>

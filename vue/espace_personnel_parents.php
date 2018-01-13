@@ -7,19 +7,25 @@
  */
     session_start();
 
-    if(empty($_SESSION))
-    {
-        header("Location: ../index.php");
-    }
-
-    $id = null;
-    $nom = null;
-
-if(isset($_SESSION['id']) && isset($_SESSION['nom']))
+if(empty($_SESSION))
 {
-    $id = $_SESSION['id'];
-    $nom = $_SESSION['nom'];
+    header("Location: ../index.php");
 }
+
+$id = null;
+$nom = null;
+
+if(!empty($_SESSION['type']) && $_SESSION['type'] == 'parentUtilisateur')
+{
+    header("Location: espace_personnel_utilisateur.php");
+} else if(!empty($_SESSION['type']) && $_SESSION['type'] == 'presidentApero')
+{
+    header("Location: espace_personnel_utilisateur.php");
+}
+
+
+$id = $_SESSION['id'];
+$nom = $_SESSION['nom']
 
 ?>
 <!DOCTYPE html>
@@ -34,7 +40,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['nom']))
 </head>
 <body>
     <nav class="navbar navbar-light bg-faded" style="background-color: #e3f2fd;">
-        <a class="navbar-brand" href="../index.php"><img src="../img/logoRugby.png" width="80" height="50"/>Apero</a>
+        <a class="navbar-brand" href="../index.php"><img src="../img/logoRugby.png" width="100" height="70"/>Apero</a>
         <div class="navbar-nav d-inline">
             <button class="btn btn-success "><span class="fa fa-user"> <?php echo $nom; ?></span></button>
             <a href="../controlleur/deconnexion.php"><button class="btn btn-outline-dark"><span class="fa fa-sign-out">Déconnexion</span></button></a>
@@ -45,7 +51,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['nom']))
         <div class="float-left" style="width: 250px; margin-right: 20px;">
             <h1 style="text-align: center;">Enfants</h1>
             <ul class="list-group" v-for="enfant in listeEnfants">
-                <li class="list-group-item d-flex justify-content-between align-items-center" v-on:click="selectionnerEnfant">{{ enfant.prenom }} <span class="badge badge-primary">Solde : {{ enfant.solde }}€</span></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center"><span v-on:click="selectionnerEnfant">{{ enfant.prenom }}</span> <span class="badge badge-primary">Solde : {{ enfant.solde }}€</span><button class="btn btn-danger" v-on:click="confirmation">X</button></li>
             </ul>
         </div>
 

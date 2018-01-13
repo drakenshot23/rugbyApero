@@ -44,7 +44,7 @@ let app = new Vue({
 
     },
     beforeUpdate: function () {
-        this.enfantSelectionne = liste[0]['prenom'];
+
       this.listeEnfants = liste;
     },
     methods: {
@@ -89,6 +89,15 @@ let app = new Vue({
             let text = $(event.target).text();
             this.enfantSelectionne = text;
 
+        },
+        supprimerEnfant: function () {
+            console.log("Delete successful!");
+        },
+        confirmation: function () {
+            if(window.confirm("Voulez vous supprimer l'enfant ?") === true)
+            {
+                this.supprimerEnfant();
+            }
         }
     }
 });

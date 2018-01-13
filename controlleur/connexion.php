@@ -62,13 +62,13 @@ if(isset($_POST['email']) && isset($_POST['mdp']))
         $_SESSION['type'] = $row[0]['typeGestionnaire'];
         $_SESSION['mail'] = $_POST['email'];
 
-        if ($_SESSION['type']=='parent'){
-            header("Location: espace_personnel_parents.php");
+        if (row[0]['typeGestionnaire']=='parent'){
+            header("Location: ../vue/espace_personnel_parents.php");
         }
-        else if ($_SESSION['type']=='parenUtilisateur'){
+        else if (row[0]['typeGestionnaire']=='parenUtilisateur'){
             header("Location: ../vue/espace_personnel_utilisateur.php");
         }
-        else if  ($_SESSION['type']=='presidentApero'){
+        else if  (row[0]['typeGestionnaire']=='presidentApero'){
             header("Location: ../vue/espace_personnel_president.php");
         }
         header("Location: ../index.php");

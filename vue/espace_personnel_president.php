@@ -15,11 +15,16 @@ if(empty($_SESSION))
 $id = null;
 $nom = null;
 
-if(isset($_SESSION['id']) && isset($_SESSION['nom']))
+if(!empty($_SESSION['type']) && $_SESSION['type'] == 'parent')
 {
-    $id = $_SESSION['id'];
-    $nom = $_SESSION['nom'];
+    header("Location: espace_personnel_parents.php");
+} else if(!empty($_SESSION['type']) && $_SESSION['type'] == 'parentUtilisateur')
+{
+    header("Location: espace_personnel_utilisateur.php");
 }
+
+$id = $_SESSION['id'];
+$nom = $_SESSION['nom'];
 
 ?>
 <!DOCTYPE html>
@@ -43,42 +48,42 @@ if(isset($_SESSION['id']) && isset($_SESSION['nom']))
     <div id="apero">
         <div>
             <ul class="nav nav-tabs justify-content-center">
-                <li class="nav-item"><a href="#" class="nav-link fa fa-plus"> Ajouter un produit</a></li>
-                <li class="nav-item"><a href="#" class="nav-link fa fa-user-plus"> Définir un parent utilisateur</a></li>
-                <li class="nav-item"><a href="#" class="nav-link fa fa-minus-circle"> Supprimer un parent utilisateur</a></li>
-                <li class="nav-item"><a href="#" class="nav-link fa fa-trash"> Réinitialiser la base de données</a></li>
+                <li class="nav-item"><a href="#" id="ajouterProduit" class="nav-link fa fa-plus" v-on:click="changeTab"> Ajouter un produit</a></li>
+                <li class="nav-item"><a href="#" id="definirUtilisateur" class="nav-link fa fa-user-plus" v-on:click="changeTab"> Définir un parent utilisateur</a></li>
+                <li class="nav-item"><a href="#" id="supprimerUtilisateur" class="nav-link fa fa-minus-circle" v-on:click="changeTab"> Supprimer un parent utilisateur</a></li>
+                <li class="nav-item"><a href="#" id="reinitialiser" class="nav-link fa fa-trash" v-on:click="changeTab"> Réinitialiser la base de données</a></li>
             </ul>
         </div>
-        <div id="ajouterProduit" v-if="selectedTab === 1" style="display: flex; justify-content: center;">
+        <div  v-if="selectedTab === 1" style="display: flex; justify-content: center;">
             <div class="form-group" style="width: 500px;" >
                 <label for="nomProduit">Nom du produit</label>
-                <input type="text" class="form-control" id="nomProduit" name="nomProduit" v-model="nomProduit" placeholder="Entre le nom du produit">
+                <input type="text" class="form-control" id="nomProduit" name="nomProduit" placeholder="Entre le nom du produit">
                 <label for="prix">Prix</label>
-                <input type="number" class="form-control" name="prix" id="prix" v-model="prix" placeholder="Entre le prix du produit en €">
+                <input type="number" class="form-control" name="prix" id="prix" placeholder="Entre le prix du produit en €">
                 <label for="quantite">Quantité</label>
-                <input type="number" class="form-control" name="quantite" id="quantite" v-model="quantite" placeholder="Entrez la quantité du produit">
+                <input type="number" class="form-control" name="quantite" id="quantite" placeholder="Entrez la quantité du produit">
                 <label for="seuil">Seuil de rupture</label>
-                <input type="number" class="form-control" name="seuil" id="seuil" v-model="seuil" placeholder="Entrez le seuil de rupture">
+                <input type="number" class="form-control" name="seuil" id="seuil"  placeholder="Entrez le seuil de rupture">
                 <div class="text-center" style="margin-top: 15px;">
-                    <button type="button" class="btn btn-primary" v-on:click="ajouterProduit">Ajouter Produit</button>
+                    <button type="button" class="btn btn-primary">Ajouter Produit</button>
                 </div>
             </div>
         </div>
-        <div id="definirUtilisateur" v-if="selectedTab === 2">
+        <div v-if="selectedTab === 2" style="display: flex; justify-content: center;">
 
         </div>
-        <div id="supprimerUtilisateur" v-if="selectedTab === 3" style="display: flex; justify-content: center;">
+        <div v-if="selectedTab === 3" style="display: flex; justify-content: center;">
             <div class="form-group" style="500px">
                 <label for="mailUtilisateur">E-mail utilisateur</label>
                 <input type="email" class="form-control" name="mailUtilisateur" id="mailUtilisateur" v-model="mailUtilisateur" placeholder="Entre le mail de l'utilisateur">
                 <div class="text-center" style="margin-top: 15px;">
-                    <button type="button" class="btn btn-primary" v-on:click="ajouterUtilisateur">Supprimer Utilisateur</button>
+                    <button type="button" class="btn btn-primary">Supprimer l'utilisateur</button>
                 </div>
             </div>
         </div>
-        <div id="reinitialiser" v-if="selectedTab === 4">
+        <div v-if="selectedTab === 4">
             <div class="text-center" style="margin-top: 15px;">
-                <button type="button" class="btn btn-danger" v-on:click="supprimerBd">Supprimer Base de données</button>
+                <button type="button" class="btn btn-danger">Supprimer la base de données</button>
             </div>
         </div>
     </div>
