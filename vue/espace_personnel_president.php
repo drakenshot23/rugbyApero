@@ -79,14 +79,13 @@ $nom = $_SESSION['nom'];
         <div v-if="selectedTab === 3" style="display: flex; justify-content: center;">
             <div class="form-group" style="width: 500px;">
                 <label for="nomUtilisateur">Nom</label>
-                <input type="text" class="form-control" name="nomUtilisateur" id="nomUtilisateur" placeholder="Nom du parent utilisateur">
+                <input type="text" class="form-control" name="nomUtilisateur" id="nomUtilisateur" v-model="nouvelUtilisateur.nom" placeholder="Nom du parent utilisateur">
                 <label for="prenomUtilisateur">Prenom</label>
-                <input type="text" class="form-control" name="prenomUtilisateur" id="prenomUtilisateur" placeholder="Prenom du parent utilisateur">
+                <input type="text" class="form-control" name="prenomUtilisateur" id="prenomUtilisateur" v-model="nouvelUtilisateur.prenom" placeholder="Prenom du parent utilisateur">
                 <label for="mailNouvelUtilisateur">E-mail utilisateur</label>
-                <input type="email" class="form-control" name="mailNouvelUtilisateur" id="mailNouvelUtilisateur" placeholder="E-mail de l'utilisateur">
-
+                <input type="email" class="form-control" name="mailNouvelUtilisateur" id="mailNouvelUtilisateur" v-model="nouvelUtilisateur.mail" placeholder="E-mail de l'utilisateur">
                 <div class="text-center" style="margin-top: 15px;">
-                    <button type="button" class="btn btn-primary" >Ajouter nouvel utilisateur</button>
+                    <button type="button" class="btn btn-primary" v-on:click="ajouterUtilisateur">Ajouter nouvel utilisateur</button>
                 </div>
             </div>
         </div>

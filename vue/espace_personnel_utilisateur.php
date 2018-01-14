@@ -48,12 +48,12 @@ $nom = $_SESSION['nom'];
     <div id="apero">
         <div>
             <ul class="nav nav-tabs justify-content-center">
-                <li class="nav-item"><a href="#" id="ajouterCourses" class="nav-link active fa fa-plus" v-on:click="changeTab">Ajouter des courses</a></li>
-                <li class="nav-item"><a href="#" id="creerGouter" class="nav-link fa fa-user-plus" v-on:click="changeTab">Créer un goûter</a></li>
+                <li class="nav-item"><a href="#" id="ajouterCourses" class="nav-link fa fa-plus" v-on:click="changeTab"> Ajouter des courses</a></li>
+                <li class="nav-item"><a href="#" id="creerGouter" class="nav-link fa fa-user-plus" v-on:click="changeTab"> Créer un goûter</a></li>
             </ul>
         </div>
-        <div v-if="selectedTab === 1">
-            <div class="form-group" style="500px">
+        <div v-if="selectedTab === 1" style="display: flex; justify-content: center;">
+            <div class="form-group" style="width: 500px;">
                 <label for="nomProduit">Nom Produit</label>
                 <input type="text" class="form-control">
                 <label for="quantiteProduit">Quantité</label>
@@ -63,11 +63,12 @@ $nom = $_SESSION['nom'];
                 </div>
             </div>
         </div>
-        <div v-if="selectedTab === 2">
+        <div v-if="selectedTab === 2" style="display: flex; justify-content: center;">
             <p>Créer un goûter</p>
         </div>
     </div>
-
-
+    <script type="text/javascript" src="../js/jquery.js" ></script>
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <script type="text/javascript" src="../js/app-utilisateur.js"></script>
 </body>
 </html>
