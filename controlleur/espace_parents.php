@@ -80,9 +80,10 @@ if(empty(stripslashes(file_get_contents("php://input"))))
             $telParent = $data['telParent'];
             $categorie = $data['categorie'];
 
-            $sql = "INSERT INTO ENFANT VALUES ('','$nomEnfant','$prenomEnfant','$age','$telParent','$mail','$categorie','$id')";
-            $ressql = $bd->prepare($sql);
-            $ressql->execute();
+            $sqlEnfant = "INSERT INTO ENFANT VALUES ('','$nomEnfant','$prenomEnfant','$age','$telParent','$mail','$categorie','$id')";
+            $ressqlEnfant = $bd->prepare($sqlEnfant);
+            $ressqlEnfant->execute();
+
 
             $verifierEnfantExiste2 = "SELECT numEnfant FROM enfant WHERE numUtilisateur = :id AND prenom = :prenom";
             $resExist2 = $bd->prepare($verifierEnfantExiste2);
@@ -93,13 +94,14 @@ if(empty(stripslashes(file_get_contents("php://input"))))
             $idEnfant = $resExist2->fetchAll();
 
             if ($idEnfant) {
+                $date= date();
+                $sqlCompte = "INSERT INTO COMPTE VALUES ('','$date',0,'$id','$idEnfant')";
+                $ressqlCompte = $bd->prepare($sqlCompte);
+                $ressqlCompte->execute();
 
                 $sqlAfficher = "SELECT e.numEnfant, e.prenom, SUM(montant) AS solde FROM enfant e, compte c GROUP BY e.numEnfant, e.prenom";
                 $resAfficher = $bd->prepare($sqlAfficher);
-                $resAfficher->execute(array(
-                    'id' => $id,
-                    'idEnfant' => $idEnfant
-                ));
+                $resAfficher->execute();
                 echo json_encode($resAfficher->fetchAll());
 
             } else {
@@ -132,6 +134,15 @@ if(empty(stripslashes(file_get_contents("php://input"))))
 
         echo json_encode($resAfficher->fetchAll());
 
+    }else if (($data['commande'] == "supprimerEnfant")){
+        $id = $data['numEnfant'];
+
+        $sqlDeleteC = $bd->prepare("DELETE FROM COMPTE WHERE numEnfant = $id");
+        $sqlDeleteC->execute();
+
+        $sqlDeleteE = $bd->prepare("DELETE FROM ENFANT WHERE numEnfant = $id");
+        $sqlDeleteE->execute();
+        //Manque le test pour savoir si le solde = 0 et qui est une condition pour supprimer le compte
     }
 }
 

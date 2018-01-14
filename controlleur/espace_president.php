@@ -141,9 +141,21 @@ else {
 
     }
     else if ($data['commande'] == "ajouterUtilisateur"){
+        $mail = $data['mail'];
+        $verrif = $bd->prepare("SELECT numUtilsateur FROM UTILISATEUR WHERE mail = :mail " );
+        $verrif->execute(array('mail'=>$mail));
+        $row = $verrif->fetchAll();
 
+        if ($row){
+            $err = "L'utilisateur existe déja";
+            echo json_encode($err);
+        }else {
+            $nom = $data['nom'];
+            $prenom = $data['prenom'];
 
+            $ajout = $bd->prepare("INSERT INTO UTILISATEUR VALUES ('','parentUtilisateur','$nom','$prenom','$mail','M3mBr3@Per0',NULL,NULL,NULL )");
+            $ajout->execute();
+        }
     }
-
 }
 ?>
