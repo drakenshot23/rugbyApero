@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: anthony
- * Date: 02/01/2018
- * Time: 23:24
- */
+
 session_start();
 
 if(empty($_SESSION))
