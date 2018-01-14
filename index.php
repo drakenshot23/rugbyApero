@@ -40,21 +40,17 @@ if(!empty($_SESSION['id']) && !empty($_SESSION['nom']))
     </head>
     <body>
         <nav class="navbar navbar-light bg-faded" style="background-color: #e3f2fd;">
-            <a class="navbar-brand logo-centre" href="index.php"><img src="img/logoRugby.png" width="80" height="50"/>Apero</a>
+            <a class="navbar-brand logo-centre" href="index.php"><img src="img/logoRugby.png" width="100" height="70"/>Apero</a>
             <div class="navbar-nav d-inline">
                 <a href="vue/formulaire_inscription.php"><button class="btn btn-outline-primary">Inscription</button></a>
                 <a href="vue/formulaire_connexion.php"><button class="btn btn-outline-success">Connexion</button></a>
             </div>
         </nav>
+        <div class="container-fluid" style="background-image: url('img/ecoleRugby.jpg'); height: 400px; background-position: center; background-repeat: no-repeat; background-size: cover;">
+
+        </div>
     </body>
     <style>
-        @media screen and(max-width: 1150px)
-        {
-            .logo-centre
-            {
-                text-align: center;
-            }
-        }
     </style>
 </html>
 

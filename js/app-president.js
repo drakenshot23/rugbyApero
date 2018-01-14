@@ -1,11 +1,10 @@
 let listeParents = [];
-
-let actionTabs = {AJOUTER: 1, DEFINIR: 2, SUPPRIMER: 3, REINITIALISER: 4 };
+let listeProduits = [];
 
 let appPresident = new Vue({
    el: "#apero",
     data: {
-        selectedTab: actionTabs.AJOUTER,
+        selectedTab: 1,
     },
     methods: {
         changeTab: function (event) {
@@ -13,14 +12,18 @@ let appPresident = new Vue({
             {
                 this.selectedTab = 1;
             }
-            if((event.target.id) === "definirUtilisateur") {
-                this.selectedTab = 2;
+            if((event.target.id) === "listeProduits")
+            {
+                this.selectedTab =2;
             }
-            if((event.target.id) === "supprimerUtilisateur") {
+            if((event.target.id) === "definirUtilisateur") {
                 this.selectedTab = 3;
             }
-            if((event.target.id) === "reinitialiser") {
+            if((event.target.id) === "supprimerUtilisateur") {
                 this.selectedTab = 4;
+            }
+            if((event.target.id) === "reinitialiser") {
+                this.selectedTab = 5;
             }
         },
     }

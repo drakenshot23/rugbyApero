@@ -20,7 +20,7 @@ if(!empty($_SESSION['type']) && $_SESSION['type'] == 'parentUtilisateur')
     header("Location: espace_personnel_utilisateur.php");
 } else if(!empty($_SESSION['type']) && $_SESSION['type'] == 'presidentApero')
 {
-    header("Location: espace_personnel_utilisateur.php");
+    header("Location: espace_personnel_president.php");
 }
 
 
@@ -29,7 +29,7 @@ $nom = $_SESSION['nom']
 
 ?>
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Espace personnel - Parents</title>

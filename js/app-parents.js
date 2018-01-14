@@ -1,4 +1,4 @@
-var liste = [];
+var enfantsDuParent = [];
 
 let actionTabs = {AJOUTER: 1, INSCRIRE: 2};
 
@@ -14,7 +14,7 @@ let app = new Vue({
             categorie: ""
         },
         montant: "",
-        listeEnfants: liste,
+        listeEnfants: enfantsDuParent,
         afficherAjouterArgent: true,
         enfantSelectionne: "",
         selectedTab: actionTabs.AJOUTER
@@ -31,21 +31,21 @@ let app = new Vue({
                 for(let i = 0; i < rep.length; i++)
                 {
                     let enf = {numEnfant: rep[i]['numEnfant'], prenom: rep[i]['prenom'], solde: rep[i]['solde']};
-                    liste.push(enf);
+                    enfantsDuParent.push(enf);
                 }
             }
         });
     },
     beforeMount: function() // se lance avant que le DOM soit initialisé
     {
-        this.listeEnfants = liste;
+        this.listeEnfants = enfantsDuParent;
     },
     mounted: function () { // Se lance une fois que le DOM est initialisé
 
     },
     beforeUpdate: function () {
 
-      this.listeEnfants = liste;
+      this.listeEnfants = enfantsDuParent;
     },
     methods: {
         changeTab: function (event) {
@@ -67,7 +67,7 @@ let app = new Vue({
                     for(let i = 0; i < rep.length; i++)
                     {
                         let enf = {numEnfant: rep[i]['numEnfant'], prenom: rep[i]['prenom'], solde: rep[i]['solde']};
-                        liste.push(enf);
+                        enfantsDuParent.push(enf);
                     }
                 }
             });
@@ -98,6 +98,17 @@ let app = new Vue({
             {
                 this.supprimerEnfant();
             }
+        },
+        idEnfant: function (prenomEnfant) {
+            let id = null;
+            for(let i = 0; i < enfantsDuParent.length; i++)
+            {
+                if(enfantsDuParent.prenom === prenomEnfant)
+                {
+                    id = enfantsDuParent.numEnfant;
+                }
+            }
+            return id;
         }
     }
 });
