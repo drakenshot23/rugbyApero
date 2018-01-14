@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b41f5a1-4aa1-499e-98f9-ef39ad1e38ff" name="Default" comment="redirection fonctionnent boutton supprimer et menu president fonctionnel">
+    <list default="true" id="6b41f5a1-4aa1-499e-98f9-ef39ad1e38ff" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controlleur/connexion.php" afterPath="$PROJECT_DIR$/controlleur/connexion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controlleur/deconnexion.php" afterPath="$PROJECT_DIR$/controlleur/deconnexion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controlleur/espace_parents.php" afterPath="$PROJECT_DIR$/controlleur/espace_parents.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controlleur/espace_president.php" afterPath="$PROJECT_DIR$/controlleur/espace_president.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controlleur/inscription.php" afterPath="$PROJECT_DIR$/controlleur/inscription.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controlleur/test.php" afterPath="$PROJECT_DIR$/controlleur/test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/espace_personnel_parents.php" afterPath="$PROJECT_DIR$/vue/espace_personnel_parents.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/espace_personnel_president.php" afterPath="$PROJECT_DIR$/vue/espace_personnel_president.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/espace_personnel_utilisateur.php" afterPath="$PROJECT_DIR$/vue/espace_personnel_utilisateur.php" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +28,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="espace_parents.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="espace_parents.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controlleur/espace_parents.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="356">
@@ -58,6 +53,65 @@
                 <marker date="1515964612343" expanded="true" signature="4385:4425" ph="DELETE FROM " />
                 <marker date="1515964612343" expanded="true" signature="4498:4516" ph="DELETE FROM " />
                 <marker date="1515964612343" expanded="true" signature="4498:4535" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="espace_personnel_parents.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vue/espace_personnel_parents.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+              <folding>
+                <element signature="e#6#94#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="espace_personnel_president.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue/espace_personnel_president.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="formulaire_inscription.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue/formulaire_inscription.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-94">
+              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding>
+                <marker date="1515962179608" expanded="true" signature="3166:3184" ph="..." />
+                <marker date="1515962179608" expanded="true" signature="3429:3447" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="formulaire_connexion.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue/formulaire_connexion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding>
+                <marker date="1515962179606" expanded="true" signature="1813:1831" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="espace_personnel_utilisateur.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue/espace_personnel_utilisateur.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+              <folding>
+                <element signature="e#6#94#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -110,9 +164,7 @@
         <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/js/app-utilisateur.js" />
         <option value="$PROJECT_DIR$/controlleur/espace_utilisateur.php" />
-        <option value="$PROJECT_DIR$/vue/espace_personnel_utilisateur.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/vue/espace_personnel_president.php" />
         <option value="$PROJECT_DIR$/js/app-president.js" />
         <option value="$PROJECT_DIR$/vue/formulaire_connexion.php" />
         <option value="$PROJECT_DIR$/vue/formulaire_inscription.php" />
@@ -125,6 +177,8 @@
         <option value="$PROJECT_DIR$/controlleur/inscription.php" />
         <option value="$PROJECT_DIR$/controlleur/test.php" />
         <option value="$PROJECT_DIR$/controlleur/espace_parents.php" />
+        <option value="$PROJECT_DIR$/vue/espace_personnel_utilisateur.php" />
+        <option value="$PROJECT_DIR$/vue/espace_personnel_president.php" />
       </list>
     </option>
   </component>
@@ -476,11 +530,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515883273778</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="ajout de requete">
+      <created>1515964646226</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1515964646226</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152986000" />
+    <option name="totallyTimeSpent" value="153054000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -621,7 +682,8 @@
     <MESSAGE value="pages president et utiisateur + js" />
     <MESSAGE value="page espace parent" />
     <MESSAGE value="redirection fonctionnent boutton supprimer et menu president fonctionnel" />
-    <option name="LAST_COMMIT_MESSAGE" value="redirection fonctionnent boutton supprimer et menu president fonctionnel" />
+    <MESSAGE value="ajout de requete" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout de requete" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -797,69 +859,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/formulaire_connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/formulaire_inscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <marker date="1515962179608" expanded="true" signature="457:3550" ph="..." />
-            <marker date="1515962179608" expanded="true" signature="468:683" ph="..." />
-            <marker date="1515962179608" expanded="true" signature="694:3542" ph="..." />
-            <marker date="1515962179608" expanded="false" signature="753:779" ph="..." />
-            <marker date="1515962179608" expanded="true" signature="780:1096" ph="..." />
-            <marker date="1515962179608" expanded="true" signature="948:1081" ph="..." />
-            <marker date="1515962179608" expanded="true" signature="1237:2982" ph="..." />
-            <marker date="1515962179608" expanded="true" signature="1401:1539" ph="..." />
-            <marker date="1515962179608" expanded="true" signature="1719:1860" ph="..." />
-            <marker date="1515962179608" expanded="true" signature="2038:2155" ph="..." />
-            <marker date="1515962179608" expanded="false" signature="2847:2864" ph="..." />
-            <marker date="1515962179608" expanded="true" signature="2865:2966" ph="..." />
-            <marker date="1515962179608" expanded="true" signature="2997:3529" ph="..." />
-            <marker date="1515962179608" expanded="true" signature="3166:3184" ph="..." />
-            <marker date="1515962179608" expanded="true" signature="3429:3447" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/espace_personnel_utilisateur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-149">
-          <caret line="41" column="105" lean-forward="false" selection-start-line="41" selection-start-column="105" selection-end-line="41" selection-end-column="105" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/app-parents.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-236">
           <caret line="27" column="57" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="57" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/espace_personnel_president.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/espace_personnel_parents.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#94#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1016,6 +1020,55 @@
             <marker date="1515964612343" expanded="true" signature="4385:4425" ph="DELETE FROM " />
             <marker date="1515964612343" expanded="true" signature="4498:4516" ph="DELETE FROM " />
             <marker date="1515964612343" expanded="true" signature="4498:4535" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/espace_personnel_president.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/formulaire_inscription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-94">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <marker date="1515962179608" expanded="true" signature="3166:3184" ph="..." />
+            <marker date="1515962179608" expanded="true" signature="3429:3447" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/formulaire_connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <marker date="1515962179606" expanded="true" signature="1813:1831" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/espace_personnel_utilisateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <folding>
+            <element signature="e#6#94#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/espace_personnel_parents.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <folding>
+            <element signature="e#6#94#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
