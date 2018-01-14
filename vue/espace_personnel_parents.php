@@ -60,7 +60,7 @@ $nom = $_SESSION['nom']
                     <label for="montantEnfant">{{enfantSelectionne}}</label>
                     <input type="number" class="form-control" id="montantEnfant" v-model="montant" placeholder="Montant à ajouter">
                     <div class="text-center" style="margin-top: 15px;">
-                        <button type="button" class="btn btn-primary" v-on:click="">Ajouter de l'argent</button>
+                        <button type="button" class="btn btn-primary" v-on:click="ajouterArgent">Ajouter de l'argent</button>
                     </div>
                 </form>
             </div>

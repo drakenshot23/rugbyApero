@@ -28,20 +28,13 @@ let app = new Vue({
             data: JSON.stringify({commande: "afficherEnfant"}),
             success: function (data) {
                 let rep = JSON.parse(data);
-                for(let i = 0; i < rep.length; i++)
-                {
-                    let enf = {numEnfant: rep[i]['numEnfant'], prenom: rep[i]['prenom'], solde: rep[i]['solde']};
-                    enfantsDuParent.push(enf);
-                }
+                this.updateEnfantsDuParent(rep);
             }
         });
     },
     beforeMount: function() // se lance avant que le DOM soit initialisé
     {
         this.listeEnfants = enfantsDuParent;
-    },
-    mounted: function () { // Se lance une fois que le DOM est initialisé
-
     },
     beforeUpdate: function () {
 
@@ -64,11 +57,7 @@ let app = new Vue({
                 data: JSON.stringify(this.nouvelEnfant),
                 success: function (data) {
                     let rep = JSON.parse(data);
-                    for(let i = 0; i < rep.length; i++)
-                    {
-                        let enf = {numEnfant: rep[i]['numEnfant'], prenom: rep[i]['prenom'], solde: rep[i]['solde']};
-                        enfantsDuParent.push(enf);
-                    }
+                    this.updateEnfantsDuParent(rep);
                 }
             });
         },
@@ -76,10 +65,10 @@ let app = new Vue({
             $.ajax({
                 method: 'POST',
                 url: '../controlleur/espace_parents.php',
-                data: JSON.stringify({commande: "ajouterArgent", }), // envoyer le
+                data: JSON.stringify({commande: "ajouterArgent", numEnfant: this.idEnfant(this.enfantSelectionne)}), // envoyer le
                 success: function (data) {
                     let rep = JSON.parse(data);
-
+                    this.updateEnfantsDuParent(rep);
                     // Modifier le solde de l'enfant
                 }
             })
@@ -109,6 +98,13 @@ let app = new Vue({
                 }
             }
             return id;
+        },
+        updateEnfantsDuParent: function (rep) {
+            for(let i = 0; i < rep.length; i++)
+            {
+                let enf = {numEnfant: rep[i]['numEnfant'], prenom: rep[i]['prenom'], solde: rep[i]['solde']};
+                enfantsDuParent.push(enf);
+            }
         }
     }
 });
